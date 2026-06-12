@@ -1,0 +1,145 @@
+{
+  "common": {
+    "logo": "Mobifone",
+    "login": "Login",
+    "register": "Register",
+    "language": "Language",
+    "personal": "Personal",
+    "business": "Business",
+    "home": "Home"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "description": "Sign in to access Mobifone services",
+      "usernameOrEmail": "Username or Email",
+      "usernameOrEmailPlaceholder": "Enter username or email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "submit": "Login",
+      "submitting": "Signing in...",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "mockHint": "Mock: use {username} / {password} for /admin"
+    },
+    "register": {
+      "title": "Register",
+      "description": "Create a new Mobifone account",
+      "username": "Username",
+      "usernamePlaceholder": "Enter username",
+      "email": "Email",
+      "emailPlaceholder": "Enter email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "confirmPassword": "Confirm password",
+      "confirmPasswordPlaceholder": "Re-enter password",
+      "submit": "Register",
+      "submitting": "Registering...",
+      "hasAccount": "Already have an account?"
+    },
+    "error": {
+      "title": "Error",
+      "loginFailed": "Login failed. Please try again.",
+      "registerFailed": "Registration failed. Please try again."
+    },
+    "validation": {
+      "usernameOrEmailRequired": "Please enter username or email",
+      "passwordRequired": "Please enter password",
+      "usernameMin": "Username must be at least 3 characters",
+      "emailInvalid": "Invalid email address",
+      "passwordMin": "Password must be at least 6 characters",
+      "confirmPasswordMismatch": "Passwords do not match"
+    }
+  },
+  "seo": {
+    "siteName": "Mobifone",
+    "defaultTitle": "Mobifone - Telecommunications & Digital Services",
+    "defaultDescription": "Mobifone delivers telecommunications, 5G, mobile plans and digital solutions for personal and business customers in Vietnam.",
+    "keywords": "Mobifone, telecommunications, 5G, mobile plans, business, public services, telecom provider",
+    "organizationDescription": "Mobifone - Vietnam's leading telecom provider, delivering digital and telecommunications services."
+  },
+  "header": {
+    "segment": "Segment",
+    "selectSegment": "Select segment"
+  },
+  "subHeader": {
+    "telecommunications": "Telecommunications",
+    "informationTechnology": "Information Technology",
+    "transmissionBroadband": "Transmission & Broadband",
+    "publicServices": "Public Services",
+    "subscriberTypes": "Subscriber Types",
+    "packages": "Packages",
+    "services": "Services",
+    "customerSupport": "Customer Support",
+    "longTermConnection": "Long-term Connection",
+    "faq": "FAQ",
+    "promotions": "Promotions",
+    "fiveGMobifone": "5G Mobifone"
+  },
+  "footer": {
+    "about": "About",
+    "aboutDescription": "Mobifone - Vietnam's leading telecom provider, delivering digital and telecommunications services.",
+    "otherSupport": "Other Support",
+    "contact": "Contact",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "hotline": "Hotline",
+    "hotlineNumber": "1800 1090",
+    "hotlineDescription": "24/7 support for personal and business customers"
+  },
+  "pages": {
+    "home": {
+      "title": "Welcome to Mobifone",
+      "description": "Explore telecommunications and digital services for personal and business customers."
+    },
+    "telecommunications": {
+      "title": "Telecommunications",
+      "description": "Telecommunications page for business customers."
+    },
+    "informationTechnology": {
+      "title": "Information Technology",
+      "description": "Information technology page for business customers."
+    },
+    "transmissionBroadband": {
+      "title": "Transmission & Broadband",
+      "description": "Transmission and broadband page for business customers."
+    },
+    "publicServices": {
+      "title": "Public Services",
+      "description": "Public services page for personal customers."
+    },
+    "subscriberTypes": {
+      "title": "Subscriber Types",
+      "description": "Subscriber types page for personal customers."
+    },
+    "packages": {
+      "title": "Packages",
+      "description": "Packages page for personal customers."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Services page for personal customers."
+    },
+    "customerSupport": {
+      "title": "Customer Support",
+      "description": "Customer support page for personal customers."
+    },
+    "longTermConnection": {
+      "title": "Long-term Connection",
+      "description": "Long-term connection page for personal customers."
+    },
+    "faq": {
+      "title": "FAQ",
+      "description": "Frequently asked questions page for personal customers."
+    },
+    "promotions": {
+      "title": "Promotions",
+      "description": "Promotions page for personal customers."
+    },
+    "fiveGMobifone": {
+      "title": "5G Mobifone",
+      "description": "Experience superior 5G speed with Mobifone.",
+      "hero": "Connect to the future with 5G Mobifone"
+    }
+  }
+}

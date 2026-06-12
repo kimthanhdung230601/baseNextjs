@@ -1,0 +1,145 @@
+{
+  "common": {
+    "logo": "Mobifone",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "language": "Ngôn ngữ",
+    "personal": "Cá nhân",
+    "business": "Doanh nghiệp",
+    "home": "Trang chủ"
+  },
+  "auth": {
+    "login": {
+      "title": "Đăng nhập",
+      "description": "Đăng nhập để truy cập dịch vụ Mobifone",
+      "usernameOrEmail": "Tên đăng nhập hoặc Email",
+      "usernameOrEmailPlaceholder": "Nhập tên đăng nhập hoặc email",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "Nhập mật khẩu",
+      "submit": "Đăng nhập",
+      "submitting": "Đang đăng nhập...",
+      "forgotPassword": "Quên mật khẩu?",
+      "noAccount": "Chưa có tài khoản?",
+      "mockHint": "Mock: admin dùng {username} / {password} để vào /admin"
+    },
+    "register": {
+      "title": "Đăng ký",
+      "description": "Tạo tài khoản Mobifone mới",
+      "username": "Tên người dùng",
+      "usernamePlaceholder": "Nhập tên người dùng",
+      "email": "Email",
+      "emailPlaceholder": "Nhập email",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "Nhập mật khẩu",
+      "confirmPassword": "Xác nhận mật khẩu",
+      "confirmPasswordPlaceholder": "Nhập lại mật khẩu",
+      "submit": "Đăng ký",
+      "submitting": "Đang đăng ký...",
+      "hasAccount": "Đã có tài khoản?"
+    },
+    "error": {
+      "title": "Lỗi",
+      "loginFailed": "Đăng nhập thất bại. Vui lòng thử lại.",
+      "registerFailed": "Đăng ký thất bại. Vui lòng thử lại."
+    },
+    "validation": {
+      "usernameOrEmailRequired": "Vui lòng nhập tên đăng nhập hoặc email",
+      "passwordRequired": "Vui lòng nhập mật khẩu",
+      "usernameMin": "Tên người dùng phải có ít nhất 3 ký tự",
+      "emailInvalid": "Email không hợp lệ",
+      "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự",
+      "confirmPasswordMismatch": "Mật khẩu xác nhận không khớp"
+    }
+  },
+  "seo": {
+    "siteName": "Mobifone",
+    "defaultTitle": "Mobifone - Dịch vụ viễn thông & công nghệ số",
+    "defaultDescription": "Mobifone cung cấp dịch vụ viễn thông, 5G, gói cước và giải pháp công nghệ cho khách hàng cá nhân và doanh nghiệp tại Việt Nam.",
+    "keywords": "Mobifone, viễn thông, 5G, gói cước, doanh nghiệp, dịch vụ công, nhà mạng",
+    "organizationDescription": "Mobifone - Nhà mạng hàng đầu Việt Nam, cung cấp dịch vụ viễn thông và công nghệ số."
+  },
+  "header": {
+    "segment": "Phân khúc",
+    "selectSegment": "Chọn phân khúc"
+  },
+  "subHeader": {
+    "telecommunications": "Viễn thông",
+    "informationTechnology": "Công nghệ thông tin",
+    "transmissionBroadband": "Truyền dẫn, băng rộng",
+    "publicServices": "Dịch vụ công",
+    "subscriberTypes": "Loại thuê bao",
+    "packages": "Gói cước",
+    "services": "Dịch vụ",
+    "customerSupport": "Hỗ trợ khách hàng",
+    "longTermConnection": "Kết nối dài lâu",
+    "faq": "Câu hỏi thường gặp",
+    "promotions": "Khuyến mại",
+    "fiveGMobifone": "5G Mobifone"
+  },
+  "footer": {
+    "about": "Giới thiệu",
+    "aboutDescription": "Mobifone - Nhà mạng hàng đầu Việt Nam, cung cấp dịch vụ viễn thông và công nghệ số.",
+    "otherSupport": "Hỗ trợ khác",
+    "contact": "Liên hệ",
+    "terms": "Điều khoản sử dụng",
+    "privacy": "Chính sách bảo mật",
+    "hotline": "Hotline",
+    "hotlineNumber": "1800 1090",
+    "hotlineDescription": "Hỗ trợ 24/7 cho khách hàng cá nhân và doanh nghiệp"
+  },
+  "pages": {
+    "home": {
+      "title": "Chào mừng đến với Mobifone",
+      "description": "Khám phá dịch vụ viễn thông và công nghệ số dành cho cá nhân và doanh nghiệp."
+    },
+    "telecommunications": {
+      "title": "Viễn thông",
+      "description": "Trang viễn thông dành cho doanh nghiệp."
+    },
+    "informationTechnology": {
+      "title": "Công nghệ thông tin",
+      "description": "Trang công nghệ thông tin dành cho doanh nghiệp."
+    },
+    "transmissionBroadband": {
+      "title": "Truyền dẫn, băng rộng",
+      "description": "Trang truyền dẫn và băng rộng dành cho doanh nghiệp."
+    },
+    "publicServices": {
+      "title": "Dịch vụ công",
+      "description": "Trang dịch vụ công dành cho khách hàng cá nhân."
+    },
+    "subscriberTypes": {
+      "title": "Loại thuê bao",
+      "description": "Trang loại thuê bao dành cho khách hàng cá nhân."
+    },
+    "packages": {
+      "title": "Gói cước",
+      "description": "Trang gói cước dành cho khách hàng cá nhân."
+    },
+    "services": {
+      "title": "Dịch vụ",
+      "description": "Trang dịch vụ dành cho khách hàng cá nhân."
+    },
+    "customerSupport": {
+      "title": "Hỗ trợ khách hàng",
+      "description": "Trang hỗ trợ khách hàng dành cho khách hàng cá nhân."
+    },
+    "longTermConnection": {
+      "title": "Kết nối dài lâu",
+      "description": "Trang kết nối dài lâu dành cho khách hàng cá nhân."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "description": "Trang câu hỏi thường gặp dành cho khách hàng cá nhân."
+    },
+    "promotions": {
+      "title": "Khuyến mại",
+      "description": "Trang khuyến mại dành cho khách hàng cá nhân."
+    },
+    "fiveGMobifone": {
+      "title": "5G Mobifone",
+      "description": "Trải nghiệm tốc độ 5G vượt trội cùng Mobifone.",
+      "hero": "Kết nối tương lai với 5G Mobifone"
+    }
+  }
+}
