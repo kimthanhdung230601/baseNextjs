@@ -66,15 +66,44 @@
     "telecommunications": "Viễn thông",
     "informationTechnology": "Công nghệ thông tin",
     "transmissionBroadband": "Truyền dẫn, băng rộng",
-    "publicServices": "Dịch vụ công",
+    "publicServices": "Dịch vụ di động",
     "subscriberTypes": "Loại thuê bao",
     "packages": "Gói cước",
     "services": "Dịch vụ",
+    "registerNetwork": "Đăng ký hoà mạng",
+    "internationalServices": "Dịch vụ quốc tế",
+    "eSim": "eSIM",
     "customerSupport": "Hỗ trợ khách hàng",
+    "searchStore": "Tìm kiếm cửa hàng",
+    "sendFeedback": "Gửi phản ánh",
+    "numberPortability": " Chuyển mạng giữ số",
     "longTermConnection": "Kết nối dài lâu",
     "faq": "Câu hỏi thường gặp",
     "promotions": "Khuyến mại",
-    "fiveGMobifone": "5G Mobifone"
+    "searchPrize": "Tra cứu mã giải thưởng",
+    "promotionNews": "Tin khuyến mại",
+    "prizeInformation": "Thông tin trúng thưởng",
+    "fiveGMobifone": "5G Mobifone",
+    "recruitment": "Tuyển dụng",
+    "myMobifone": "My Mobifone",
+    "accountInformation": "Tài khoản",
+    "benefits": "Tiện ích",
+    "bills": "Hóa đơn",
+    "accountInfo": "Thông tin tài khoản",
+    "accountDetails": "Thông tin cá nhân",
+    "registerInfo": "Đăng ký thông tin",
+    "mypointUsage": "Lịch sử mypoint",
+    "fwaManagement": "Quản lý thiết bị FWA",
+    "bankTransfer": "Thanh toán ngân hàng",
+    "mobifoneOnline": "MobiFone Online",
+    "mypointBenefit": "Ưu đãi mypoint",
+    "billInquiry": "Tra cước",
+    "billHistory": "Lịch sử nạp tiền/thanh toán",
+    "billWebApp": "Lịch sử thanh toán trên web/app MobiFone",
+    "billInvoice": "Hóa đơn bán hàng",
+    "autopay": "Autopay",
+    "topup": "Nạp tiền",
+    "mobifiber": "Thanh toán Mobifiber"
   },
   "footer": {
     "about": "Giới thiệu",
@@ -104,10 +133,6 @@
       "title": "Truyền dẫn, băng rộng",
       "description": "Trang truyền dẫn và băng rộng dành cho doanh nghiệp."
     },
-    "publicServices": {
-      "title": "Dịch vụ công",
-      "description": "Trang dịch vụ công dành cho khách hàng cá nhân."
-    },
     "subscriberTypes": {
       "title": "Loại thuê bao",
       "description": "Trang loại thuê bao dành cho khách hàng cá nhân."
@@ -119,6 +144,18 @@
     "services": {
       "title": "Dịch vụ",
       "description": "Trang dịch vụ dành cho khách hàng cá nhân."
+    },
+    "registerNetwork": {
+      "title": "Đăng ký hoà mạng",
+      "description": "Trang đăng ký hoà mạng dành cho khách hàng cá nhân."
+    },
+    "internationalServices": {
+      "title": "Dịch vụ quốc tế",
+      "description": "Trang dịch vụ quốc tế dành cho khách hàng cá nhân."
+    },
+    "eSim": {
+      "title": "eSIM",
+      "description": "Trang eSIM dành cho khách hàng cá nhân."
     },
     "customerSupport": {
       "title": "Hỗ trợ khách hàng",
@@ -132,14 +169,114 @@
       "title": "Câu hỏi thường gặp",
       "description": "Trang câu hỏi thường gặp dành cho khách hàng cá nhân."
     },
+    "searchStore": {
+      "title": "Tìm kiếm cửa hàng",
+      "description": "Trang tìm kiếm cửa hàng dành cho khách hàng cá nhân."
+    },
+    "sendFeedback": {
+      "title": "Phản ánh",
+      "description": "Trang phản ánh dành cho khách hàng cá nhân."
+    },
+    "searchPrize": {
+      "title": "Tra cứu mã giải thưởng",
+      "description": "Trang tra cứu mã giải thưởng dành cho khách hàng cá nhân."
+    },
+    "numberPortability": {
+      "title": "Chuyển mạng giữ số",
+      "description": "Trang chuyển mạng giữ số dành cho khách hàng cá nhân."
+    },
+    "promotionNews": {
+      "title": "Khuyến mại",
+      "description": "Trang khuyến mại dành cho khách hàng cá nhân."
+    },
+    "prizeInformation": {
+      "title": "Thông tin trúng thưởng",
+      "description": "Trang thông tin trúng thưởng dành cho khách hàng cá nhân."
+    },
     "promotions": {
       "title": "Khuyến mại",
       "description": "Trang khuyến mại dành cho khách hàng cá nhân."
+    },
+    "myMobifone": {
+      "title": "My Mobifone",
+      "description": "Trang My Mobifone dành cho khách hàng cá nhân."
+    },
+    "recruitment": {
+      "title": "Tuyển dụng",
+      "description": "Trang tuyển dụng dành cho khách hàng cá nhân."
     },
     "fiveGMobifone": {
       "title": "5G Mobifone",
       "description": "Trải nghiệm tốc độ 5G vượt trội cùng Mobifone.",
       "hero": "Kết nối tương lai với 5G Mobifone"
+    },
+    "accountInfo": {
+      "title": "Thông tin tài khoản",
+      "description": "Quản lý thông tin cá nhân và tài khoản Mobifone của bạn."
+    },
+    "accountDetails": {
+      "title": "Thông tin cá nhân",
+      "description": "Xem và cập nhật thông tin cá nhân của bạn."
+    },
+    "registerInfo": {
+      "title": "Đăng ký thông tin",
+      "description": "Đăng ký và quản lý thông tin cá nhân của bạn."
+    },
+    "myPoint": {
+      "title": "Lịch sử mypoint",
+      "description": "Xem lịch sử sử dụng mypoint của bạn."
+    },
+    "fwaManagement": {
+      "title": "Quản lý thiết bị FWA",
+      "description": "Quản lý và theo dõi thiết bị FWA của bạn."
+    },
+    "mobifone": {
+      "title": "MobiFone",
+      "description": "Truy cập dịch vụ MobiFone trực tuyến."
+    },
+    "topUp": {
+      "title": "Nạp tiền",
+      "description": "Nạp tiền vào tài khoản Mobifone của bạn."
+    },
+    "bankPayment": {
+      "title": "Thanh toán ngân hàng",
+      "description": "Thanh toán cước phí Mobifone qua ngân hàng."
+    },
+    "autopay": {
+      "title": "Autopay",
+      "description": "Quản lý và sử dụng dịch vụ Autopay của bạn."
+    },
+    "mobifiber": {
+      "title": "Thanh toán Mobifiber",
+      "description": "Thanh toán dịch vụ Mobifiber của bạn."
+    },
+    "myPointBenefit": {
+      "title": "Ưu đãi mypoint",
+      "description": "Khám phá các ưu đãi và phần thưởng từ mypoint."
+    },
+    "mobifoneOnline": {
+      "title": "MobiFone Online",
+      "description": "Truy cập dịch vụ MobiFone trực tuyến."
+    },
+    "billInquiry": {
+      "title": "Tra cước",
+      "description": "Tra cứu cước phí và hóa đơn Mobifone của bạn."
+    },
+    "billPayment": {
+      "title": "Thanh toán cước",
+      "description": "Thanh toán cước phí Mobifone."
+    },
+    "billWebApp": {
+      "title": "Lịch sử thanh toán trên web/app MobiFone",
+      "description": "Xem lịch sử thanh toán trên web và ứng dụng Mobifone."
+    },
+    "billHistory": {
+      "title": "Lịch sử nạp tiền/thanh toán",
+      "description": "Xem lịch sử nạp tiền và thanh toán cước phí Mobifone."
+    },
+    "billInvoice": {
+      "title": "Hóa đơn bán hàng",
+      "description": "Xem và quản lý hóa đơn bán hàng Mobifone của bạn."
     }
   }
 }

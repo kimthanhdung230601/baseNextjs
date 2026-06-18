@@ -6,43 +6,60 @@ export const SITE_URL =
 export const SITE_NAME = "Mobifone";
 
 export const SEO_ROUTES: SeoRouteConfig[] = [
-  { path: "", namespace: "pages.home" },
   {
-    path: "/business/telecommunications",
+    path: "",
+    namespace: "pages.home",
+  },
+
+  {
+    path: "/doanh-nghiep/vien-thong",
     namespace: "pages.telecommunications",
   },
   {
-    path: "/business/information-technology",
+    path: "/doanh-nghiep/cong-nghe-thong-tin",
     namespace: "pages.informationTechnology",
   },
   {
-    path: "/business/transmission-broadband",
+    path: "/doanh-nghiep/truyen-dan-bang-rong",
     namespace: "pages.transmissionBroadband",
   },
-  { path: "/personal/public-services", namespace: "pages.publicServices" },
+
+  // {
+  //   path: "/dich-vu-di-dong",
+  //   namespace: "pages.publicServices",
+  // },
   {
-    path: "/personal/public-services/subscriber-types",
+    path: "/dich-vu-di-dong/loai-thue-bao",
     namespace: "pages.subscriberTypes",
   },
   {
-    path: "/personal/public-services/packages",
+    path: "/dich-vu-di-dong/goi-cuoc",
     namespace: "pages.packages",
   },
   {
-    path: "/personal/public-services/services",
+    path: "/dich-vu-di-dong/dich-vu",
     namespace: "pages.services",
   },
+
   {
-    path: "/personal/customer-support",
+    path: "/ho-tro-khach-hang",
     namespace: "pages.customerSupport",
   },
   {
-    path: "/personal/customer-support/long-term-connection",
+    path: "/ho-tro-khach-hang/ket-noi-dai-lau",
     namespace: "pages.longTermConnection",
   },
-  { path: "/personal/customer-support/faq", namespace: "pages.faq" },
-  { path: "/personal/promotions", namespace: "pages.promotions" },
-  { path: "/personal/5g-mobifone", namespace: "pages.fiveGMobifone" },
-  { path: "/auth/login", namespace: "auth.login", noIndex: true },
-  { path: "/auth/register", namespace: "auth.register", noIndex: true },
+  {
+    path: "/ho-tro-khach-hang/cau-hoi-thuong-gap",
+    namespace: "pages.faq",
+  },
+
+  {
+    path: "/khuyen-mai",
+    namespace: "pages.promotions",
+  },
+  {
+    path: "/5g-mobifone",
+    namespace: "pages.fiveGMobifone",
+  },
 ];
