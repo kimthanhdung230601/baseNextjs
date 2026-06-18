@@ -217,7 +217,8 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
     {
       key: "fiveGMobifone",
       label: "fiveGMobifone",
-      href: "/5g-mobifone",
+      href: "https://5g.mobifone.vn",
+      isExternal: true,
     },
   ],
 };

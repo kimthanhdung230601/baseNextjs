@@ -4,7 +4,7 @@ import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
 
 export const generateMetadata = createSegmentMetadata(
   "fiveGMobifone",
-  "/personal/5g-mobifone",
+  "/personal/5g-mobifone"
 );
 
 interface PageProps {

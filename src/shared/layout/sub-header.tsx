@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import type { ComponentPropsWithoutRef } from "react";
+import { forwardRef, useState } from "react";
 import {
   BUSINESS_NAVIGATION,
   PERSONAL_NAVIGATION,
@@ -58,6 +59,31 @@ interface SubHeaderItemProps {
   title: string;
 }
 
+interface SubHeaderLinkProps extends Omit<ComponentPropsWithoutRef<"a">, "href"> {
+  href: string;
+  isExternal?: boolean;
+}
+
+const SubHeaderLink = forwardRef<HTMLAnchorElement, SubHeaderLinkProps>(
+  ({ href, isExternal, rel, target, ...props }, ref) => {
+    if (isExternal) {
+      return (
+        <a
+          ref={ref}
+          href={href}
+          target={target ?? "_blank"}
+          rel={rel ?? "noopener noreferrer"}
+          {...props}
+        />
+      );
+    }
+
+    return <Link ref={ref} href={href} {...props} />;
+  }
+);
+
+SubHeaderLink.displayName = "SubHeaderLink";
+
 function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
   const t = useTranslations("subHeader");
   const pathname = usePathname();
@@ -97,8 +123,9 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
                   {column.items?.map((subItem) => (
                     <li key={subItem.key}>
                       {subItem.href ? (
-                        <Link
+                        <SubHeaderLink
                           href={subItem.href}
+                          isExternal={subItem.isExternal}
                           className={cn(
                             "text-sm text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200",
                             pathname === subItem.href &&
@@ -106,7 +133,7 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
                           )}
                         >
                           {t(subItem.label)}
-                        </Link>
+                        </SubHeaderLink>
                       ) : (
                         <span className="text-sm text-zinc-700 dark:text-zinc-400">
                           {t(subItem.label)}
@@ -150,8 +177,9 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
           {item.href ? (
             <>
               <DropdownMenuItem asChild>
-                <Link
+                <SubHeaderLink
                   href={item.href}
+                  isExternal={item.isExternal}
                   className={cn(
                     "cursor-pointer",
                     pathname === item.href &&
@@ -159,7 +187,7 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
                   )}
                 >
                   {label}
-                </Link>
+                </SubHeaderLink>
               </DropdownMenuItem>
               <div className="my-1 border-b border-zinc-200 dark:border-zinc-800" />
             </>
@@ -167,8 +195,9 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
           {item.children.map((child) =>
             child.href ? (
               <DropdownMenuItem key={child.key} asChild>
-                <Link
+                <SubHeaderLink
                   href={child.href}
+                  isExternal={child.isExternal}
                   className={cn(
                     "cursor-pointer",
                     pathname === child.href &&
@@ -176,7 +205,7 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
                   )}
                 >
                   {t(child.key)}
-                </Link>
+                </SubHeaderLink>
               </DropdownMenuItem>
             ) : null
           )}
@@ -190,8 +219,9 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
   }
 
   return (
-    <Link
+    <SubHeaderLink
       href={item.href}
+      isExternal={item.isExternal}
       className={cn(
         "rounded-md px-3 py-2 text-sm font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800",
         pathname === item.href &&
@@ -199,6 +229,6 @@ function SubHeaderItem({ item, label, title }: SubHeaderItemProps) {
       )}
     >
       {label}
-    </Link>
+    </SubHeaderLink>
   );
 }
