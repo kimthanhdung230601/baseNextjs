@@ -110,7 +110,22 @@
     },
     "subscriberTypes": {
       "title": "Loại thuê bao",
-      "description": "Trang loại thuê bao dành cho khách hàng cá nhân."
+      "description": "Trang loại thuê bao dành cho khách hàng cá nhân.",
+      "searchDraft": {
+        "title": "Bản nháp tìm kiếm",
+        "description": "Form test nhanh để đồng bộ search params với URL.",
+        "keywordLabel": "Từ khóa",
+        "keywordPlaceholder": "Nhập tên gói cước hoặc loại thuê bao",
+        "subscriberGroupLabel": "Nhóm thuê bao",
+        "subscriberGroupPlaceholder": "Chọn nhóm thuê bao",
+        "submit": "Tìm kiếm",
+        "options": {
+          "allGroups": "Tất cả nhóm thuê bao",
+          "prepaid": "Trả trước",
+          "postpaid": "Trả sau",
+          "data": "Data"
+        }
+      }
     },
     "packages": {
       "title": "Gói cước",

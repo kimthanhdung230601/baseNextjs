@@ -110,7 +110,22 @@
     },
     "subscriberTypes": {
       "title": "Subscriber Types",
-      "description": "Subscriber types page for personal customers."
+      "description": "Subscriber types page for personal customers.",
+      "searchDraft": {
+        "title": "Search draft",
+        "description": "Quick test form for syncing search params with the URL.",
+        "keywordLabel": "Keyword",
+        "keywordPlaceholder": "Enter package or subscriber type",
+        "subscriberGroupLabel": "Subscriber group",
+        "subscriberGroupPlaceholder": "Select subscriber group",
+        "submit": "Search",
+        "options": {
+          "allGroups": "All subscriber groups",
+          "prepaid": "Prepaid",
+          "postpaid": "Postpaid",
+          "data": "Data"
+        }
+      }
     },
     "packages": {
       "title": "Packages",

@@ -50,7 +50,7 @@ vexere-fe/
     ├── shared/             # Hạ tầng lõi, không chứa trạng thái nghiệp vụ (Stateless Core)
     │   ├── components/     # UI Component nguyên tử (Button, Modal, Table, Pagination, Breadcrumb)
     │   ├── layouts/        # Giao diện layout tĩnh để các file layout của App Router import vào
-    │     |── constants/
+    │── constants/          # Các hàm interface, type, enum, validator... được đưa vào đây
     │     |── enums/
     │     |── validator/
     │     |── utils/
