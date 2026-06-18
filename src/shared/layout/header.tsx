@@ -1,10 +1,11 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { Button } from "@/shared/components/ui/button";
 import { LanguageSwitcher } from "@/shared/layout/language-switcher";
 import { SegmentSwitcher } from "@/shared/layout/segment-switcher";
 import { useTranslations } from "next-intl";
+
+import { Button } from "@/shared/components/ui/button";
 
 export function Header() {
   const t = useTranslations("common");

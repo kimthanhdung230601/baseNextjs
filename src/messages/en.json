@@ -70,11 +70,40 @@
     "subscriberTypes": "Subscriber Types",
     "packages": "Packages",
     "services": "Services",
+    "registerNetwork": "Register Network",
+    "internationalServices": "International Services",
+    "eSim": "eSIM",
     "customerSupport": "Customer Support",
+    "searchStore": "Search Store",
+    "sendFeedback": "Send Feedback",
+    "numberPortability": "Number Portability",
     "longTermConnection": "Long-term Connection",
     "faq": "FAQ",
     "promotions": "Promotions",
-    "fiveGMobifone": "5G Mobifone"
+    "searchPrize": "Search Prize",
+    "promotionNews": "Promotion News",
+    "prizeInformation": "Prize Information",
+    "fiveGMobifone": "5G Mobifone",
+    "recruitment": "Recruitment",
+    "myMobifone": "My Mobifone",
+    "accountInformation": "Account Information",
+    "benefits": "Benefits",
+    "bills": "Bills",
+    "accountInfo": "Account Info",
+    "accountDetails": "Account Details",
+    "registerInfo": "Registration Information",
+    "mypointUsage": "Mypoint Usage",
+    "fwaManagement": "FWA Management",
+    "bankTransfer": "Bank Transfer",
+    "mobifoneOnline": "MobiFone Online",
+    "mypointBenefit": "Mypoint Benefits",
+    "mobifiberPayment": "Fiber Payment",
+    "billInquiry": "Bill Inquiry",
+    "billHistory": "Bill History",
+    "billWebApp": "Bill Web App",
+    "billInvoice": "Bill Invoice",
+    "autopay": "Autopay",
+    "topup": "Top-up"
   },
   "footer": {
     "about": "About",
@@ -90,56 +119,96 @@
   "pages": {
     "home": {
       "title": "Welcome to Mobifone",
-      "description": "Explore telecommunications and digital services for personal and business customers."
+      "description": "Explore telecommunications and digital services for individuals and businesses."
     },
     "telecommunications": {
       "title": "Telecommunications",
-      "description": "Telecommunications page for business customers."
+      "description": "Telecommunications page for businesses."
     },
     "informationTechnology": {
       "title": "Information Technology",
-      "description": "Information technology page for business customers."
+      "description": "Information technology page for businesses."
     },
     "transmissionBroadband": {
-      "title": "Transmission & Broadband",
-      "description": "Transmission and broadband page for business customers."
-    },
-    "publicServices": {
-      "title": "Public Services",
-      "description": "Public services page for personal customers."
+      "title": "Transmission, Broadband",
+      "description": "Transmission and broadband page for businesses."
     },
     "subscriberTypes": {
       "title": "Subscriber Types",
-      "description": "Subscriber types page for personal customers."
+      "description": "Subscriber types page for individual customers."
     },
     "packages": {
       "title": "Packages",
-      "description": "Packages page for personal customers."
+      "description": "Packages page for individual customers."
     },
     "services": {
       "title": "Services",
-      "description": "Services page for personal customers."
+      "description": "Services page for individual customers."
+    },
+    "registerNetwork": {
+      "title": "Register Network",
+      "description": "Register network page for individual customers."
+    },
+    "internationalServices": {
+      "title": "International Services",
+      "description": "International services page for individual customers."
+    },
+    "eSim": {
+      "title": "eSIM",
+      "description": "eSIM page for individual customers."
     },
     "customerSupport": {
       "title": "Customer Support",
-      "description": "Customer support page for personal customers."
+      "description": "Customer support page for individual customers."
     },
     "longTermConnection": {
       "title": "Long-term Connection",
-      "description": "Long-term connection page for personal customers."
+      "description": "Long-term connection page for individual customers."
     },
     "faq": {
-      "title": "FAQ",
-      "description": "Frequently asked questions page for personal customers."
+      "title": "Frequently Asked Questions",
+      "description": "Frequently asked questions page for individual customers."
+    },
+    "searchStore": {
+      "title": "Search Store",
+      "description": "Store search page for individual customers."
+    },
+    "sendFeedback": {
+      "title": "Send Feedback",
+      "description": "Feedback page for individual customers."
+    },
+    "searchPrize": {
+      "title": "Search Prize",
+      "description": "Prize search page for individual customers."
+    },
+    "numberPortability": {
+      "title": "Number Portability",
+      "description": "Number portability page for individual customers."
+    },
+    "promotionNews": {
+      "title": "Promotion News",
+      "description": "Promotion news page for individual customers."
+    },
+    "prizeInformation": {
+      "title": "Prize Information",
+      "description": "Prize information page for individual customers."
     },
     "promotions": {
       "title": "Promotions",
-      "description": "Promotions page for personal customers."
+      "description": "Promotions page for individual customers."
+    },
+    "myMobifone": {
+      "title": "My Mobifone",
+      "description": "My Mobifone page for individual customers."
+    },
+    "recruitment": {
+      "title": "Recruitment",
+      "description": "Recruitment page for individual customers."
     },
     "fiveGMobifone": {
       "title": "5G Mobifone",
-      "description": "Experience superior 5G speed with Mobifone.",
-      "hero": "Connect to the future with 5G Mobifone"
+      "description": "Trải nghiệm tốc độ 5G vượt trội cùng Mobifone.",
+      "hero": "Kết nối tương lai với 5G Mobifone"
     }
   }
 }
