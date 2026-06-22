@@ -12,5 +12,10 @@ interface PageProps {
 }
 
 export default function NumberPortabilityPage({ params }: PageProps) {
-  return <SegmentPage params={params} translationKey="numberPortability" />;
+  return (
+    <SegmentPage params={params} translationKey="numberPortability" breadcrumbSegments={[
+      { labelSource: "subHeader.customerSupport" },
+      { labelSource: "subHeader.numberPortability" },
+    ]} />
+  )
 }

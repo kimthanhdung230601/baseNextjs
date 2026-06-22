@@ -1,6 +1,4 @@
-import React from "react";
 import { SegmentPage } from "@/shared/layout/segment-page";
-
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
 
 export const generateMetadata = createSegmentMetadata(
@@ -12,7 +10,12 @@ interface PageProps {
 }
 
 const TypeBagPage = ({ params }: PageProps) => {
-  return <SegmentPage params={params} translationKey="subscriberTypes" />;
+  return (
+    <SegmentPage params={params} translationKey="subscriberTypes" breadcrumbSegments={[
+      { labelSource: "subHeader.publicServices" },
+      { labelSource: "subHeader.subscriberTypes" },
+    ]} />
+  );
 };
 
 export default TypeBagPage;

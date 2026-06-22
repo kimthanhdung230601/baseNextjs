@@ -1,5 +1,4 @@
 import { SegmentPage } from "@/shared/layout/segment-page";
-
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
 
 export const generateMetadata = createSegmentMetadata(
@@ -12,5 +11,10 @@ interface PageProps {
 }
 
 export default function ServicesPage({ params }: PageProps) {
-  return <SegmentPage params={params} translationKey="services" />;
+  return (
+    <SegmentPage params={params} translationKey="services" breadcrumbSegments={[
+      { labelSource: "subHeader.publicServices" },
+      { labelSource: "subHeader.services" },
+    ]} />
+  );
 }

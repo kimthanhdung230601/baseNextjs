@@ -1,5 +1,4 @@
 import { SegmentPage } from "@/shared/layout/segment-page";
-
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
 
 export const generateMetadata = createSegmentMetadata(
@@ -12,5 +11,10 @@ interface PageProps {
 }
 
 export default function LongTermConnectionPage({ params }: PageProps) {
-  return <SegmentPage params={params} translationKey="longTermConnection" />;
+  return (
+    <SegmentPage params={params} translationKey="longTermConnection" breadcrumbSegments={[
+      { labelSource: "subHeader.customerSupport" },
+      { labelSource: "subHeader.longTermConnection" },
+    ]} />
+  );
 }

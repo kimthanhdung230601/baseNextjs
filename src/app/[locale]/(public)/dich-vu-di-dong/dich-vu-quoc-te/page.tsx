@@ -1,6 +1,4 @@
-import React from "react";
 import { SegmentPage } from "@/shared/layout/segment-page";
-
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
 
 export const generateMetadata = createSegmentMetadata(
@@ -12,7 +10,12 @@ interface PageProps {
 }
 
 const InternationalServicesPage = ({ params }: PageProps) => {
-  return <SegmentPage params={params} translationKey="internationalServices" />;
+  return (
+    <SegmentPage params={params} translationKey="internationalServices" breadcrumbSegments={[
+      { labelSource: "subHeader.publicServices" },
+      { labelSource: "subHeader.internationalServices" },
+    ]} />
+  );
 };
 
 export default InternationalServicesPage;
