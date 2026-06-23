@@ -1,4 +1,3 @@
-import React from "react";
 import { SegmentPage } from "@/shared/layout/segment-page";
 
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";

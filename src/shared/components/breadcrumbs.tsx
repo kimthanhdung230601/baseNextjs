@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 import { BreadcrumbSegment } from "@/types/interfaces/navigation";
+import configs from "@/constants/config";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -42,7 +43,7 @@ export default function Breadcrumbs({ segments }: { segments: BreadcrumbSegment[
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <Link href="/">{t("common.home")}</Link>
+            <Link href={configs.BASE_PATH}>{t("common.home")}</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

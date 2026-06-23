@@ -1,10 +1,10 @@
 import { SegmentPage } from "@/shared/layout/segment-page";
-
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import configs from "@/constants/config";
 
 export const generateMetadata = createSegmentMetadata(
   "telecommunications",
-  "/doanh-nghiep/vien-thong"
+  `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`
 );
 
 interface PageProps {

@@ -12,6 +12,7 @@ import { useTranslations } from "next-intl";
 
 import { Segment } from "@/types/enums/segment";
 import type { NavigationItem } from "@/types/interfaces/navigation";
+import configs from "@/constants/config";
 import { cn } from "@/lib/utils/index";
 import {
   DropdownMenu,
@@ -29,7 +30,7 @@ export function SubHeader({ segment }: SubHeaderProps) {
   const pathname = usePathname();
   const activeSegment =
     segment ??
-    (pathname.includes("doanh-nghiep") ? Segment.BUSINESS : Segment.PERSONAL);
+    (pathname.includes(configs.BUSINESS_PATH_SEGMENT) ? Segment.BUSINESS : Segment.PERSONAL);
   const navigation =
     activeSegment === Segment.BUSINESS
       ? BUSINESS_NAVIGATION
