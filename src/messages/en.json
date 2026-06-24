@@ -103,7 +103,8 @@
     "billWebApp": "Bill Web App",
     "billInvoice": "Bill Invoice",
     "autopay": "Autopay",
-    "topup": "Top-up"
+    "topup": "Top-up",
+    "mobifiber": "Mobifiber Payment"
   },
   "footer": {
     "about": "About",
@@ -222,8 +223,76 @@
     },
     "fiveGMobifone": {
       "title": "5G Mobifone",
-      "description": "Trải nghiệm tốc độ 5G vượt trội cùng Mobifone.",
-      "hero": "Kết nối tương lai với 5G Mobifone"
+      "description": "Experience superior 5G speed with Mobifone.",
+      "hero": "Connect to the future with 5G Mobifone"
+    },
+    "accountInfo": {
+      "title": "Account Information",
+      "description": "Manage your personal information and Mobifone account."
+    },
+    "accountDetails": {
+      "title": "Personal Information",
+      "description": "View and update your personal information."
+    },
+    "registerInfo": {
+      "title": "Registration Information",
+      "description": "Register and manage your personal information."
+    },
+    "myPoint": {
+      "title": "Mypoint History",
+      "description": "View your mypoint usage history."
+    },
+    "fwaManagement": {
+      "title": "FWA Device Management",
+      "description": "Manage and monitor your FWA devices."
+    },
+    "mobifone": {
+      "title": "MobiFone",
+      "description": "Access MobiFone online services."
+    },
+    "topUp": {
+      "title": "Top-up",
+      "description": "Add money to your Mobifone account."
+    },
+    "bankPayment": {
+      "title": "Bank Payment",
+      "description": "Pay Mobifone service fees via bank."
+    },
+    "autopay": {
+      "title": "Autopay",
+      "description": "Manage and use your Autopay service."
+    },
+    "mobifiber": {
+      "title": "Mobifiber Payment",
+      "description": "Pay for your Mobifiber service."
+    },
+    "myPointBenefit": {
+      "title": "Mypoint Benefits",
+      "description": "Explore rewards and offers from mypoint."
+    },
+    "mobifoneOnline": {
+      "title": "MobiFone Online",
+      "description": "Access MobiFone online services."
+    },
+    "billInquiry": {
+      "title": "Bill Inquiry",
+      "description": "Check your Mobifone charges and bills."
+    },
+    "billPayment": {
+      "title": "Bill Payment",
+      "description": "Pay your Mobifone charges."
+    },
+    "billWebApp": {
+      "title": "Payment History on MobiFone Web/App",
+      "description": "View your payment history on the MobiFone website and app."
+    },
+    "billHistory": {
+      "title": "Top-up/Payment History",
+      "description": "View your Mobifone top-up and payment history."
+    },
+    "billInvoice": {
+      "title": "Sales Invoice",
+      "description": "View and manage your Mobifone sales invoices."
     }
   }
 }

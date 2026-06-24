@@ -1,4 +1,5 @@
 import type { SeoRouteConfig } from "@/types/interfaces/seo";
+import configs from "./config";
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -12,15 +13,15 @@ export const SEO_ROUTES: SeoRouteConfig[] = [
   },
 
   {
-    path: "/doanh-nghiep/vien-thong",
+    path: `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`,
     namespace: "pages.telecommunications",
   },
   {
-    path: "/doanh-nghiep/cong-nghe-thong-tin",
+    path: `/${configs.BUSINESS_PATH_SEGMENT}/cong-nghe-thong-tin`,
     namespace: "pages.informationTechnology",
   },
   {
-    path: "/doanh-nghiep/truyen-dan-bang-rong",
+    path: `/${configs.BUSINESS_PATH_SEGMENT}/truyen-dan-bang-rong`,
     namespace: "pages.transmissionBroadband",
   },
 

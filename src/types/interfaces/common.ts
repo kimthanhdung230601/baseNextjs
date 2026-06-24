@@ -25,3 +25,7 @@ export interface ApiPaginatedResponse<T = unknown>
   pageSize: number;
   total: number;
 }
+
+export interface PageProps {
+  params: Promise<{ locale: string }>;
+}

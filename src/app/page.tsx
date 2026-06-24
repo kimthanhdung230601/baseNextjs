@@ -7,8 +7,8 @@ import {
 } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { PageContent } from "@/shared/layout/page-content";
 import { SiteShell } from "@/shared/layout/site-shell";
+import SegmentPage from "@/shared/layout/segment-page";
 
 export async function generateMetadata() {
   const locale = await getLocale();
@@ -24,15 +24,12 @@ export async function generateMetadata() {
 }
 
 export default async function RootPage() {
-  const locale = await getLocale();
-  setRequestLocale(locale);
-  const t = await getTranslations("pages.telecommunications");
   const messages = await getMessages();
 
   return (
     <NextIntlClientProvider messages={messages}>
       <SiteShell>
-        <PageContent title={t("title")} description={t("description")} />
+        <SegmentPage />
       </SiteShell>
     </NextIntlClientProvider>
   );

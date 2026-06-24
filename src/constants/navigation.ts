@@ -1,5 +1,6 @@
 import { Segment } from "@/types/enums/segment";
 import type { NavigationConfig } from "@/types/interfaces/navigation";
+import configs from "./config";
 
 export const BUSINESS_NAVIGATION: NavigationConfig = {
   segment: Segment.BUSINESS,
@@ -7,17 +8,17 @@ export const BUSINESS_NAVIGATION: NavigationConfig = {
     {
       key: "telecommunications",
       label: "telecommunications",
-      href: "/doanh-nghiep/vien-thong",
+      href: `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`,
     },
     {
       key: "informationTechnology",
       label: "informationTechnology",
-      href: "/doanh-nghiep/cong-nghe-thong-tin",
+      href: `/${configs.BUSINESS_PATH_SEGMENT}/cong-nghe-thong-tin`,
     },
     {
       key: "transmissionBroadband",
       label: "transmissionBroadband",
-      href: "/doanh-nghiep/truyen-dan-bang-thong",
+      href: `/${configs.BUSINESS_PATH_SEGMENT}/truyen-dan-bang-thong`,
     },
   ],
 };
@@ -224,8 +225,8 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
 };
 
 export const SEGMENT_HOME_PATH = {
-  [Segment.PERSONAL]: "/",
-  [Segment.BUSINESS]: "/doanh-nghiep/vien-thong",
+  [Segment.PERSONAL]: configs.BASE_PATH,
+  [Segment.BUSINESS]: `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`,
 } as const;
 
 export const FIVE_G_MOBIFONE_PATH = "/personal/5g-mobifone";

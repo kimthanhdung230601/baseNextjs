@@ -27,3 +27,9 @@ export interface NavigationConfig {
   segment: Segment;
   items: NavigationItem[];
 }
+
+export type BreadcrumbSegment = {
+  labelSource: string;
+  dynamicSegment?: boolean;
+  href?: string;
+}
