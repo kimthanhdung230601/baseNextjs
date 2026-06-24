@@ -1,21 +1,12 @@
-import { PageContent } from "@/shared/layout/page-content";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-
 import { createPageMetadata } from "@/lib/seo/create-page-metadata";
+import type { PageProps } from "@/types/interfaces/common";
+import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createPageMetadata({
   path: "",
   namespace: "pages.home",
 });
 
-interface HomePageProps {
-  params: Promise<{ locale: string }>;
-}
-
-export default async function HomePage({ params }: HomePageProps) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-  const t = await getTranslations("pages.home");
-
-  return <PageContent title={t("title")} description={t("description")} />;
+export default async function HomePage({ params }: PageProps) {
+  return <SegmentPage params={params} translationKey="home" />
 }

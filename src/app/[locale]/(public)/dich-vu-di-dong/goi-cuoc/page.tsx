@@ -1,13 +1,11 @@
-import { SegmentPage } from "@/shared/layout/segment-page";
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import type { PageProps } from "@/types/interfaces/common";
+import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createSegmentMetadata(
   "packages",
   "/dich-vu-di-dong/goi-cuoc"
 );
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
 
 const PackagesPage = ({ params }: PageProps) => {
   return (
