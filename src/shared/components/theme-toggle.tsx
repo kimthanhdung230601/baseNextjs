@@ -1,10 +1,7 @@
 "use client";
 
-import React from "react";
 import { Icons } from "@/shared/components/icons";
 import { useTheme } from "next-themes";
-
-import { cn } from "@/lib/utils";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();

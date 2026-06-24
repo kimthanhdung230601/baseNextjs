@@ -1,15 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import type { PageProps } from "@/types/interfaces/common";
 
 export const generateMetadata = createSegmentMetadata(
   "fiveGMobifone",
   "/personal/5g-mobifone"
 );
-
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
 
 export default async function FiveGMobifonePage({ params }: PageProps) {
   const { locale } = await params;

@@ -6,8 +6,8 @@ import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Segment } from "@/types/enums/segment";
-import { getSegmentFromPathname } from "@/lib/navigation";
 import { Button } from "@/shared/components/ui/button";
+import configs from "@/constants/config";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,7 +19,7 @@ export function SegmentSwitcher() {
   const t = useTranslations("common");
   const pathname = usePathname();
   const router = useRouter();
-  const currentSegment = pathname.includes("doanh-nghiep")
+  const currentSegment = pathname.includes(configs.BUSINESS_PATH_SEGMENT)
     ? Segment.BUSINESS
     : Segment.PERSONAL;
 

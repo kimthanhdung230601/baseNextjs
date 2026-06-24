@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { routing } from "@/i18n/routing";
 import { Button } from "@/shared/components/ui/button";
