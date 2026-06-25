@@ -1,4 +1,5 @@
 export const ROUTE_PATHS = {
+  ROOT: "/",
   TELECOMMUNICATIONS: "/doanh-nghiep/vien-thong",
   INFORMATION_TECHNOLOGY: "/doanh-nghiep/cong-nghe-thong-tin",
   TRANSMISSION_BROADBAND: "/doanh-nghiep/truyen-dan-bang-thong",
@@ -56,7 +57,7 @@ const BUSINESS_ROUTES = {
 
 const PERSONAL_ROUTES = {
   MOBILE_SERVICES: {
-    ROOT: ROUTE_PATHS.DICH_VU_DI_DONG,
+    ROOT: ROUTE_PATHS.ROOT,
     SUBSCRIBER_TYPES: ROUTE_PATHS.LOAI_THUE_BAO,
     PACKAGES: ROUTE_PATHS.GOI_CUOC,
     SERVICES: ROUTE_PATHS.DICH_VU,
