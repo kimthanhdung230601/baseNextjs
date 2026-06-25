@@ -1,4 +1,4 @@
-import { FIVE_G_MOBIFONE_PATH } from "@/constants/navigation";
+import { ROUTES } from "@/constants/route";
 import { Segment } from "@/types/enums/segment";
 
 export function getSegmentFromPathname(pathname: string): Segment {
@@ -10,9 +10,9 @@ export function getSegmentFromPathname(pathname: string): Segment {
 }
 
 export function isFiveGMobifonePath(pathname: string): boolean {
-  return pathname.includes(FIVE_G_MOBIFONE_PATH);
+  return pathname.includes(ROUTES.PERSONAL.FIVE_G_MOBIFONE_PAGE);
 }
 
 export function isAuthPath(pathname: string): boolean {
-  return pathname.includes("/auth/");
+  return pathname.includes(ROUTES.AUTH.PREFIX);
 }

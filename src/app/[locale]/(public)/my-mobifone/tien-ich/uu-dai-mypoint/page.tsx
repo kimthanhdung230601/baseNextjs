@@ -1,10 +1,11 @@
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import { ROUTES } from "@/constants/route";
 import type { PageProps } from "@/types/interfaces/common";
 import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createSegmentMetadata(
   "myPoint",
-  "/tai-khoan/uu-dai-mypoint"
+  ROUTES.PERSONAL.MY_MOBIFONE.BENEFITS.MYPOINT_BENEFIT
 );
 
 export default function MyPointPage({ params }: PageProps) {
