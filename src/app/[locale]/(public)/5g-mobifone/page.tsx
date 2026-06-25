@@ -1,10 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ROUTES } from "@/constants/route";
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
 import type { PageProps } from "@/types/interfaces/common";
 
 export const generateMetadata = createSegmentMetadata(
   "fiveGMobifone",
-  "/personal/5g-mobifone"
+  ROUTES.PERSONAL.FIVE_G_MOBIFONE_PAGE
 );
 
 export default async function FiveGMobifonePage({ params }: PageProps) {

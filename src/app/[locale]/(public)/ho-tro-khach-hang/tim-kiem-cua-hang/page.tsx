@@ -1,10 +1,11 @@
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import { ROUTES } from "@/constants/route";
 import type { PageProps } from "@/types/interfaces/common";
 import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createSegmentMetadata(
   "searchStore",
-  "/ho-tro-khach-hang/tim-kiem-cua-hang"
+  ROUTES.PERSONAL.CUSTOMER_SUPPORT.SEARCH_STORE
 );
 
 export default function SearchStorePage({ params }: PageProps) {

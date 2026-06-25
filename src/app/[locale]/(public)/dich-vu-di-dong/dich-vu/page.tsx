@@ -1,10 +1,11 @@
 import SegmentPage from "@/shared/layout/segment-page";
+import { ROUTES } from "@/constants/route";
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
 import type { PageProps } from "@/types/interfaces/common";
 
 export const generateMetadata = createSegmentMetadata(
   "services",
-  "/dich-vu-di-dong/dich-vu"
+  ROUTES.PERSONAL.MOBILE_SERVICES.SERVICES
 );
 
 export default function ServicesPage({ params }: PageProps) {

@@ -1,5 +1,5 @@
 import type { SeoRouteConfig } from "@/types/interfaces/seo";
-import configs from "./config";
+import { ROUTES, ROUTE_PATHS } from "./route";
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -13,15 +13,15 @@ export const SEO_ROUTES: SeoRouteConfig[] = [
   },
 
   {
-    path: `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`,
+    path: ROUTES.BUSINESS.TELECOMMUNICATIONS,
     namespace: "pages.telecommunications",
   },
   {
-    path: `/${configs.BUSINESS_PATH_SEGMENT}/cong-nghe-thong-tin`,
+    path: ROUTES.BUSINESS.INFORMATION_TECHNOLOGY,
     namespace: "pages.informationTechnology",
   },
   {
-    path: `/${configs.BUSINESS_PATH_SEGMENT}/truyen-dan-bang-rong`,
+    path: ROUTES.BUSINESS.TRANSMISSION_BROADBAND,
     namespace: "pages.transmissionBroadband",
   },
 
@@ -30,37 +30,37 @@ export const SEO_ROUTES: SeoRouteConfig[] = [
   //   namespace: "pages.publicServices",
   // },
   {
-    path: "/dich-vu-di-dong/loai-thue-bao",
+    path: ROUTE_PATHS.LOAI_THUE_BAO,
     namespace: "pages.subscriberTypes",
   },
   {
-    path: "/dich-vu-di-dong/goi-cuoc",
+    path: ROUTE_PATHS.GOI_CUOC,
     namespace: "pages.packages",
   },
   {
-    path: "/dich-vu-di-dong/dich-vu",
+    path: ROUTE_PATHS.DICH_VU,
     namespace: "pages.services",
   },
 
   {
-    path: "/ho-tro-khach-hang",
+    path: ROUTE_PATHS.HO_TRO_KHACH_HANG,
     namespace: "pages.customerSupport",
   },
   {
-    path: "/ho-tro-khach-hang/ket-noi-dai-lau",
+    path: ROUTE_PATHS.KET_NOI_DAI_LAU,
     namespace: "pages.longTermConnection",
   },
   {
-    path: "/ho-tro-khach-hang/cau-hoi-thuong-gap",
+    path: ROUTE_PATHS.CAU_HOI_THUONG_GAP,
     namespace: "pages.faq",
   },
 
   {
-    path: "/khuyen-mai",
+    path: ROUTE_PATHS.KHUYEN_MAI,
     namespace: "pages.promotions",
   },
   {
-    path: "/5g-mobifone",
+    path: ROUTE_PATHS.FIVE_G_MOBIFONE_PAGE,
     namespace: "pages.fiveGMobifone",
   },
 ];

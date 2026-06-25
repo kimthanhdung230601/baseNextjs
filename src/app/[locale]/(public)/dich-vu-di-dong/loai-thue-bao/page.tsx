@@ -1,10 +1,11 @@
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import { ROUTES } from "@/constants/route";
 import type { PageProps } from "@/types/interfaces/common";
 import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createSegmentMetadata(
   "subscriberTypes",
-  "/dich-vu-di-dong/loai-thue-bao"
+  ROUTES.PERSONAL.MOBILE_SERVICES.SUBSCRIBER_TYPES
 );
 
 const TypeBagPage = ({ params }: PageProps) => {

@@ -1,4 +1,4 @@
-import configs from "@/constants/config";
+import { ROUTES } from "@/constants/route";
 import SegmentPage from "@/shared/layout/segment-page";
 
 import type { PageProps } from "@/types/interfaces/common";
@@ -8,7 +8,7 @@ import { TelecommunicationsSearchDemo } from "./telecommunications-search-demo";
 
 export const generateMetadata = createSegmentMetadata(
   "telecommunications",
-  `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`
+  ROUTES.BUSINESS.TELECOMMUNICATIONS
 );
 
 export default function TelecommunicationsPage({ params }: PageProps) {
