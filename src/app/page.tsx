@@ -24,6 +24,8 @@ export async function generateMetadata() {
 }
 
 export default async function RootPage() {
+  const locale = await getLocale();
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
