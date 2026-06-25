@@ -1,5 +1,6 @@
 import { Segment } from "@/types/enums/segment";
 import type { NavigationConfig } from "@/types/interfaces/navigation";
+
 import { ROUTES } from "./route";
 
 export const BUSINESS_NAVIGATION: NavigationConfig = {
@@ -122,27 +123,32 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
             {
               key: "accountInfo",
               label: "accountInfo",
-              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION.ACCOUNT_INFO,
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .ACCOUNT_INFO,
             },
             {
               key: "accountDetails",
               label: "accountDetails",
-              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION.ACCOUNT_DETAILS,
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .ACCOUNT_DETAILS,
             },
             {
               key: "registerInfo",
               label: "registerInfo",
-              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION.REGISTER_INFO,
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .REGISTER_INFO,
             },
             {
               key: "mypointUsage",
               label: "mypointUsage",
-              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION.MYPOINT_USAGE,
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .MYPOINT_USAGE,
             },
             {
               key: "fwaManagement",
               label: "fwaManagement",
-              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION.FWA_MANAGEMENT,
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .FWA_MANAGEMENT,
             },
           ],
         },
