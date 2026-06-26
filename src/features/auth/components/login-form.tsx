@@ -2,9 +2,13 @@
 
 import { useMemo } from "react";
 import { MOCK_ACCOUNTS } from "@/constants/auth";
+import { FcGoogle } from "react-icons/fc";
 import { AuthCard } from "@/features/auth/components/auth-card";
 import { useLogin } from "@/features/auth/hooks/use-login";
 import { Link } from "@/i18n/navigation";
+
+import { AiFillGoogleCircle } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 import {
   Alert,
   AlertDescription,
@@ -26,12 +30,23 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-export function LoginForm() {
+
+import { useRouter } from "next/navigation";
+import { signIn } from "@/auth";
+// import { signIn } from "@/auth";
+type LoginFormProps = {
+  handleSignInGoogle: () => void;
+  handleSignInFacebook : () => void;
+};
+
+export function LoginForm({handleSignInGoogle , handleSignInFacebook} : LoginFormProps) {
   const t = useTranslations("auth.login");
   const tError = useTranslations("auth.error");
   const tValidation = useTranslations("auth.validation");
   const tCommon = useTranslations("common");
   const { login, isPending, error } = useLogin();
+
+  const router = useRouter();
 
   const loginSchema = useMemo(
     () =>
@@ -50,37 +65,39 @@ export function LoginForm() {
     resolver: zodResolver(loginSchema),
     defaultValues: {
       usernameOrEmail: "",
-      password: "",
+      password: "admin123",
     },
   });
 
   const handleSubmit = (values: LoginValues) => {
-    login(values);
+    console.log("valueLogin", values);
+    router.push("otp");
+    // login(values);
   };
 
   return (
     <AuthCard
       title={t("title")}
       description={t("description")}
-      footer={
-        <div className="flex w-full flex-col items-center gap-2 text-center text-sm text-zinc-600 dark:text-zinc-400">
-          <Link
-            href="/forgot-password"
-            className="font-medium text-green-600 hover:text-green-700 hover:underline dark:text-green-400 dark:hover:text-green-300"
-          >
-            {t("forgotPassword")}
-          </Link>
-          <span>
-            {t("noAccount")}{" "}
-            <Link
-              href="/auth/register"
-              className="font-medium text-green-600 hover:text-green-700 hover:underline dark:text-green-400 dark:hover:text-green-300"
-            >
-              {tCommon("register")}
-            </Link>
-          </span>
-        </div>
-      }
+    // footer={
+    //   <div className="flex w-full flex-col items-center gap-2 text-center text-sm text-zinc-600 dark:text-zinc-400">
+    //     <Link
+    //       href="/forgot-password"
+    //       className="font-medium text-green-600 hover:text-green-700 hover:underline dark:text-green-400 dark:hover:text-green-300"
+    //     >
+    //       {t("forgotPassword")}
+    //     </Link>
+    //     <span>
+    //       {t("noAccount")}{" "}
+    //       <Link
+    //         href="/auth/register"
+    //         className="font-medium text-green-600 hover:text-green-700 hover:underline dark:text-green-400 dark:hover:text-green-300"
+    //       >
+    //         {tCommon("register")}
+    //       </Link>
+    //     </span>
+    //   </div>
+    // }
     >
       <Form {...form}>
         <form
@@ -102,11 +119,15 @@ export function LoginForm() {
             name="usernameOrEmail"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t("usernameOrEmail")}</FormLabel>
+                <FormLabel>
+                  {/* {"Số điện thoại"} */}
+                  {t("phoneNumber")}
+                </FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={t("usernameOrEmailPlaceholder")}
+                    placeholder={t("phoneNumberPlaceholder")}
                     autoFocus
+                    type="tel"
                     {...field}
                   />
                 </FormControl>
@@ -114,7 +135,7 @@ export function LoginForm() {
               </FormItem>
             )}
           />
-          <FormField
+          {/* <FormField
             control={form.control}
             name="password"
             render={({ field }) => (
@@ -130,7 +151,7 @@ export function LoginForm() {
                 <FormMessage />
               </FormItem>
             )}
-          />
+          /> */}
 
           <Button
             type="submit"
@@ -153,6 +174,56 @@ export function LoginForm() {
               password: MOCK_ACCOUNTS.ADMIN.password,
             })}
           </p>
+
+          <Button
+            type="button"
+            // className="mt-2 w-full bg-amber-50-600"
+            leftIcon={<FcGoogle className="text-4xl" />}
+            disabled={isPending}
+            asChild={true}
+            variant={"outline"}
+            onClick={handleSignInGoogle}
+          >
+            {isPending ? (
+              <>
+                <Spinner className="text-white" />
+                {t("submitting")}
+              </>
+            ) : (
+              <p>
+                {"Đăng nhập với Google"}
+              </p>
+
+              // t("submit")
+            )}
+          </Button>
+
+          <Button
+            type="button"
+            // className="mt-2 w-full bg-amber-50-600"
+            leftIcon={<BsFacebook className="text-4xl text-blue-600" />}
+            disabled={isPending}
+            asChild={false}
+            variant={"outline"}
+            onClick={handleSignInFacebook}
+
+          >
+            {isPending ? (
+              <>
+                <Spinner className="text-white" />
+                {t("submitting")}
+              </>
+            ) : (
+              <p>
+                {"Đăng nhập với Facebook"}
+              </p>
+
+              // t("submit")
+            )}
+          </Button>
+
+
+
         </form>
       </Form>
     </AuthCard>
