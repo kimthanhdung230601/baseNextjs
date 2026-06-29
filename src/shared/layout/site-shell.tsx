@@ -1,14 +1,15 @@
 "use client";
 
+import { ReactNode } from "react";
+
 import { usePathname } from "@/i18n/navigation";
+import { isAuthPath, isFiveGMobifonePath } from "@/lib/navigation";
 import Footer from "@/shared/layout/footer";
 import Header from "@/shared/layout/header";
 import SubHeader from "@/shared/layout/sub-header";
 
-import { isAuthPath, isFiveGMobifonePath } from "@/lib/navigation";
-
 interface SiteShellProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function SiteShell({ children }: SiteShellProps) {
@@ -20,7 +21,6 @@ export default function SiteShell({ children }: SiteShellProps) {
     return <>{children}</>;
   }
 
-  console.log("test rule");
   return (
     <div className="flex min-h-screen flex-col">
       <Header />

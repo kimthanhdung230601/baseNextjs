@@ -2,17 +2,17 @@
 
 import type { ComponentPropsWithoutRef } from "react";
 import { forwardRef, useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+import { Segment } from "@/types/enums/segment";
+import type { NavigationItem } from "@/types/interfaces/navigation";
 import configs from "@/constants/config";
 import {
   BUSINESS_NAVIGATION,
   PERSONAL_NAVIGATION,
 } from "@/constants/navigation";
 import { Link, usePathname } from "@/i18n/navigation";
-import { ChevronDown } from "lucide-react";
-import { useTranslations } from "next-intl";
-
-import { Segment } from "@/types/enums/segment";
-import type { NavigationItem } from "@/types/interfaces/navigation";
 import { cn } from "@/lib/utils/index";
 
 interface SubHeaderProps {
@@ -37,11 +37,7 @@ export default function SubHeader({ segment }: SubHeaderProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap gap-1 py-2">
           {navigation.items.map((item) => (
-            <SubHeaderItem
-              key={item.key}
-              item={item}
-              label={t(item.key)}
-            />
+            <SubHeaderItem key={item.key} item={item} label={t(item.key)} />
           ))}
         </div>
       </div>
@@ -70,7 +66,9 @@ const SubHeaderLink = forwardRef<HTMLAnchorElement, SubHeaderLinkProps>(
           target={target ?? "_blank"}
           rel={rel ?? "noopener noreferrer"}
           {...props}
-        />
+        >
+          {props.children}
+        </a>
       );
     }
 
@@ -99,7 +97,7 @@ function SubHeaderItem({ item, label }: SubHeaderItemProps) {
           />
         </button>
         {open ? (
-          <div className="absolute left-0 top-full z-50 w-max min-w-[760px] max-w-[calc(100vw-2rem)] rounded-md border border-zinc-200 bg-white p-4 text-zinc-950 shadow-md dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50">
+          <div className="absolute top-full left-0 z-50 w-max max-w-[calc(100vw-2rem)] min-w-[760px] rounded-md border border-zinc-200 bg-white p-4 text-zinc-950 shadow-md dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50">
             <div className="grid grid-cols-3 gap-8">
               {item.children.map((column) => (
                 <div key={column.key}>
@@ -152,14 +150,14 @@ function SubHeaderItem({ item, label }: SubHeaderItemProps) {
           />
         </button>
         {open ? (
-          <div className="absolute left-0 top-full z-50 w-max min-w-[320px] max-w-[calc(100vw-2rem)] rounded-md border border-zinc-200 bg-white p-1 text-zinc-950 shadow-md dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50">
+          <div className="absolute top-full left-0 z-50 w-max max-w-[calc(100vw-2rem)] min-w-[320px] rounded-md border border-zinc-200 bg-white p-1 text-zinc-950 shadow-md dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50">
             {item.href ? (
               <>
                 <SubHeaderLink
                   href={item.href}
                   isExternal={item.isExternal}
                   className={cn(
-                    "block rounded-sm px-2 py-1.5 text-sm cursor-pointer",
+                    "block cursor-pointer rounded-sm px-2 py-1.5 text-sm",
                     pathname === item.href &&
                       "bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400"
                   )}

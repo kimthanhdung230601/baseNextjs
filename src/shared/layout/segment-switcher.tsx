@@ -1,13 +1,13 @@
 "use client";
 
-import { SEGMENT_HOME_PATH } from "@/constants/navigation";
-import { usePathname, useRouter } from "@/i18n/navigation";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Segment } from "@/types/enums/segment";
-import { Button } from "@/shared/components/ui/button";
 import configs from "@/constants/config";
+import { SEGMENT_HOME_PATH } from "@/constants/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { Button } from "@/shared/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
