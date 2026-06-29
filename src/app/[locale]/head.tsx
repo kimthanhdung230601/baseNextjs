@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { JsonLd } from "@/shared/components/seo/json-ld";
+import JsonLd from "@/shared/components/seo/json-ld";
 
 export default async function Head({
   params,

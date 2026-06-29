@@ -1,15 +1,15 @@
 "use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 
 const MOBILE_BREAKPOINT = 768;
 
-export function useIsMobile() {
-  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(
+export default function useIsMobile() {
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(
     undefined,
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     const mediaQuery = window.matchMedia(
       `(max-width: ${MOBILE_BREAKPOINT - 1}px)`,
     );

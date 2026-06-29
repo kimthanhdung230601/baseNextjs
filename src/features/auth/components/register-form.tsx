@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import { AuthCard } from "@/features/auth/components/auth-card";
-import { useRegister } from "@/features/auth/hooks/use-register";
+import AuthCard from "@/features/auth/components/auth-card";
+import useRegister from "@/features/auth/hooks/use-register";
 import { Link } from "@/i18n/navigation";
 import {
   Alert,
@@ -25,7 +25,7 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-export function RegisterForm() {
+export default function RegisterForm() {
   const t = useTranslations("auth.register");
   const tError = useTranslations("auth.error");
   const tValidation = useTranslations("auth.validation");

@@ -1,7 +1,14 @@
 "use client";
 
-import * as React from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { format, isValid, parseISO } from "date-fns";
+import { CalendarIcon, RotateCcw, Search } from "lucide-react";
+
+import type {
+  TelecommunicationsSearchFilters,
+  TelecommunicationsSearchResult,
+} from "@/types/interfaces/search";
 import {
   buildSearchUrl,
   getSearchParamsState,
@@ -11,13 +18,6 @@ import {
   TELECOMMUNICATIONS_STATUS_OPTIONS,
 } from "@/constants/utils";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { format, isValid, parseISO } from "date-fns";
-import { CalendarIcon, RotateCcw, Search } from "lucide-react";
-
-import type {
-  TelecommunicationsSearchFilters,
-  TelecommunicationsSearchResult,
-} from "@/types/interfaces/search";
 import { Badge } from "@/shared/components/ui/badge";
 import { Button } from "@/shared/components/ui/button";
 import { Calendar } from "@/shared/components/ui/calendar";
@@ -34,13 +34,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/shared/components/ui/popover";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/shared/components/ui/select";
+import MbfSelect from "@/shared/components/select";
 
 function createDraftFilters(
   currentSearchParams: string
@@ -104,17 +98,17 @@ function formatSelectedDate(value: string) {
   return format(parsedDate, "dd/MM/yyyy");
 }
 
-export function TelecommunicationsSearchDemo() {
+export default function TelecommunicationsSearchDemo() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const searchParamsString = searchParams.toString();
-  const [isCalendarOpen, setIsCalendarOpen] = React.useState(false);
-  const [filters, setFilters] = React.useState<TelecommunicationsSearchFilters>(
-    () => createDraftFilters(searchParamsString)
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const [filters, setFilters] = useState<TelecommunicationsSearchFilters>(() =>
+    createDraftFilters(searchParamsString)
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     setFilters(createDraftFilters(searchParamsString));
   }, [searchParamsString]);
 
@@ -122,7 +116,7 @@ export function TelecommunicationsSearchDemo() {
     matchesSearch(item, filters)
   );
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     router.replace(
@@ -150,7 +144,7 @@ export function TelecommunicationsSearchDemo() {
           <CardTitle className="text-xl">Ví dụ tìm kiếm lưu params</CardTitle>
           <CardDescription>
             Nhập từ khóa, chọn dịch vụ, trạng thái và ngày phát hành. Khi bấm
-            "Tìm kiếm", các giá trị sẽ được lưu vào URL.
+            các giá trị sẽ được lưu vào URL.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -179,52 +173,34 @@ export function TelecommunicationsSearchDemo() {
               <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                 Dịch vụ
               </label>
-              <Select
-                value={filters.service}
+              <MbfSelect
+                options={TELECOMMUNICATIONS_SERVICE_OPTIONS}
+                placeholderTranslationKey="common.selectService"
+                selectedValue={filters.service}
                 onValueChange={(value) =>
                   setFilters((current) => ({
                     ...current,
                     service: value,
                   }))
                 }
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Chọn dịch vụ" />
-                </SelectTrigger>
-                <SelectContent>
-                  {TELECOMMUNICATIONS_SERVICE_OPTIONS.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              />
             </div>
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                 Trạng thái
               </label>
-              <Select
-                value={filters.status}
+              <MbfSelect
+                options={TELECOMMUNICATIONS_STATUS_OPTIONS}
+                placeholderTranslationKey="common.selectStatus"
+                selectedValue={filters.status}
                 onValueChange={(value) =>
                   setFilters((current) => ({
                     ...current,
                     status: value,
                   }))
                 }
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Chọn trạng thái" />
-                </SelectTrigger>
-                <SelectContent>
-                  {TELECOMMUNICATIONS_STATUS_OPTIONS.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              />
             </div>
 
             <div className="space-y-2 lg:col-span-2">

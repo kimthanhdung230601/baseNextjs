@@ -10,7 +10,7 @@ import { loginApi } from "@/services/auth.service";
 import { UserRole } from "@/types/enums/auth";
 import type { LoginRequest } from "@/types/interfaces/auth";
 
-export function useLogin() {
+export default function useLogin() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const [payload, setPayload] = useState<LoginRequest | null>(null);

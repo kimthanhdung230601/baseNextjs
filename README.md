@@ -98,6 +98,59 @@ vexere-fe/
 
 ---
 
+## ESLint Rules
+
+Project hiện đang dùng flat config trong `eslint.config.mjs` và áp dụng các nhóm rule sau:
+
+- `react` recommended
+- `react-hooks` recommended
+- `jsx-a11y` recommended
+- `@next/next` recommended
+- `@next/next/core-web-vitals`
+
+Phạm vi áp dụng:
+
+- Bỏ qua: `.next/**`, `node_modules/**`, `out/**`, `dist/**`, `coverage/**`
+- `no-unused-vars` áp dụng cho `js`, `jsx`, `mjs`, `cjs`
+- `@typescript-eslint/no-unused-vars` áp dụng cho `ts`, `tsx`, `mts`, `cts`
+
+Một số rule đang được custom để phù hợp với codebase:
+
+- `no-unused-vars`: `warn`
+  Cảnh báo khi import, biến, tham số, hoặc giá trị destructuring được khai báo nhưng không sử dụng.
+- `@typescript-eslint/no-unused-vars`: `warn`
+  Bản TypeScript-aware của rule trên. Các tên bắt đầu bằng `_` được xem là cố ý không dùng.
+- `no-restricted-syntax`: `error`
+  Cấm `import * as React from "react"`. Chỉ import đúng React APIs cần thiết.
+- `jsx-a11y/alt-text`: `warn`
+  Nhắc bổ sung alt text cho ảnh, có hỗ trợ cả component `Image`.
+- `jsx-a11y/aria-props`: `warn`
+  Cảnh báo khi dùng sai ARIA props.
+- `jsx-a11y/aria-proptypes`: `warn`
+  Cảnh báo khi giá trị ARIA không đúng kiểu hợp lệ.
+- `jsx-a11y/aria-unsupported-elements`: `warn`
+  Cảnh báo khi gán ARIA vào element không hỗ trợ.
+- `jsx-a11y/role-has-required-aria-props`: `warn`
+  Cảnh báo khi role thiếu ARIA props bắt buộc.
+- `jsx-a11y/role-supports-aria-props`: `warn`
+  Cảnh báo khi role nhận ARIA props không hợp lệ.
+
+Những rule đang tắt:
+
+- `jsx-a11y/click-events-have-key-events`
+- `jsx-a11y/label-has-associated-control`
+- `react/jsx-no-target-blank`
+- `react/no-unknown-property`
+- `react/prop-types`
+- `react/react-in-jsx-scope`
+
+Lưu ý:
+
+- Trong file TypeScript, rule `no-unused-vars` gốc được tắt để tránh trùng lặp với `@typescript-eslint/no-unused-vars`.
+- Nếu cần điều chỉnh mức độ cảnh báo hoặc tắt thêm rule, cập nhật trực tiếp trong `eslint.config.mjs`.
+
+---
+
 ## Testing
 
 - Viết unit test cho mọi page, component, logic quan trọng.

@@ -6,7 +6,10 @@
     "language": "Ngôn ngữ",
     "personal": "Cá nhân",
     "business": "Doanh nghiệp",
-    "home": "Trang chủ"
+    "home": "Trang chủ",
+    "selectValue": "Chọn giá trị",
+    "selectStatus": "Chọn trạng thái",
+    "selectService": "Chọn dịch vụ"
   },
   "auth": {
     "login": {

@@ -1,17 +1,18 @@
 "use client";
 
-import { usePathname } from "@/i18n/navigation";
-import { Footer } from "@/shared/layout/footer";
-import { Header } from "@/shared/layout/header";
-import { SubHeader } from "@/shared/layout/sub-header";
+import { ReactNode } from "react";
 
+import { usePathname } from "@/i18n/navigation";
 import { isAuthPath, isFiveGMobifonePath } from "@/lib/navigation";
+import Footer from "@/shared/layout/footer";
+import Header from "@/shared/layout/header";
+import SubHeader from "@/shared/layout/sub-header";
 
 interface SiteShellProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export function SiteShell({ children }: SiteShellProps) {
+export default function SiteShell({ children }: SiteShellProps) {
   const pathname = usePathname();
   const isFiveGPage = isFiveGMobifonePath(pathname);
   const isAuthPage = isAuthPath(pathname);

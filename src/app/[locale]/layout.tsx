@@ -1,8 +1,6 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SITE_NAME, SITE_URL } from "@/constants/seo";
-import { routing } from "@/i18n/routing";
-import { SiteShell } from "@/shared/layout/site-shell";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -11,9 +9,12 @@ import {
 } from "next-intl/server";
 
 import { Locale } from "@/types/enums/locale";
+import { SITE_NAME, SITE_URL } from "@/constants/seo";
+import { routing } from "@/i18n/routing";
+import SiteShell from "@/shared/layout/site-shell";
 
 interface LocaleLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   params: Promise<{ locale: string }>;
 }
 

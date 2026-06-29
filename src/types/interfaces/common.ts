@@ -29,3 +29,8 @@ export interface ApiPaginatedResponse<T = unknown>
 export interface PageProps {
   params: Promise<{ locale: string }>;
 }
+
+export interface DropdownOption {
+  label: string;
+  value: string;
+}

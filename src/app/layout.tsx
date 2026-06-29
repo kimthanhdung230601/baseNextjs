@@ -1,7 +1,8 @@
-import { Provider } from "@/shared/components/provider";
+import Provider from "@/shared/components/provider";
 
 import "./globals.css";
 
+import { ReactNode } from "react";
 import type { Metadata } from "next/types";
 
 export const metadata: Metadata = {
@@ -53,11 +54,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
