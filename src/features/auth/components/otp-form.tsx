@@ -3,8 +3,6 @@
 import { useMemo } from "react";
 import { MOCK_ACCOUNTS } from "@/constants/auth";
 import { FcGoogle } from "react-icons/fc";
-import { AuthCard } from "@/features/auth/components/auth-card";
-import { useLogin } from "@/features/auth/hooks/use-login";
 import { Link } from "@/i18n/navigation";
 import { FcLeft } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
@@ -31,6 +29,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { LoginRequest } from "@/types/interfaces/auth";
 import { useRouter } from "next/navigation";
+import useLogin from "../hooks/use-login";
+import AuthCard from "./auth-card";
 
 type TOTPForm = {
   handleSignInOTP: (values: LoginRequest) =>  Promise<any>;
