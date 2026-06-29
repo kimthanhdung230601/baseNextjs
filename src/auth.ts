@@ -6,22 +6,6 @@ import { loginApi } from "./services/auth.service"
 import { LoginRequest } from "./types/interfaces/auth"
 
 
-interface IUserResponse extends User {
-  success: boolean;
-  message: string;
-  data: {
-    accessToken: string;
-    refreshToken: string;
-    user: {
-      id: string;
-      username: string;
-      email: string;
-      role: string;
-    }
-  }
-
-}
-
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     Google({
@@ -32,6 +16,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           response_type: "code",
         },
       },
+
     }),
 
     Facebook,
@@ -44,29 +29,68 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: {},
       },
       authorize: async (credentials) => {
-        let user = null
+        let user = null;
 
         // // logic to salt and hash password
         // const pwHash = saltAndHashPassword(credentials.password)
 
         // // logic to verify if the user exists
         // user = await getUserFromDb(credentials.email, pwHash)
-        try {
-          const { usernameOrEmail, password } = credentials;
-          const formValues = { usernameOrEmail, password }
-          const userResponse = await loginApi(formValues as LoginRequest)
+        const { usernameOrEmail, password } = credentials;
+        const formValues = { usernameOrEmail, password }
+        const userResponse = await loginApi(formValues as LoginRequest)
 
-          user = { ...userResponse };
-          return user as IUserResponse;
+        user = {
+          email: userResponse.data?.user.email,
+          id: userResponse.data?.user.id,
+          image: userResponse.data?.user.username,
+          name: userResponse.data?.user.username,
 
-        } catch (error) {
-          console.error("authorize error", error)
-  
-        }
+          accessToken: userResponse.data?.accessToken,
+          refreshToken: userResponse.data?.refreshToken,
+          role: userResponse.data?.user.role,
+
+        };
+        return user;
+
+
 
       },
     }),
+
   ],
+  callbacks: {
+    async jwt({ token, user, account, profile  }) {
+      if (user && account?.provider === "credentials") {
+        token.id = user.id;
+        token.role = user.role;
+        token.accessToken = user.accessToken;
+        token.refreshToken = user.refreshToken;
+      }
+
+      if (account?.provider === "google") {
+        // xem log trên server
+        console.log(profile);
+
+        token.id = user.id;
+        token.email = user.email;
+      }
+
+      return token;
+    },
+
+    async session({ session, token }) {
+      session.user.id = token.id;
+      session.user.role = token.role;
+      // refresh token ở đây
+
+      // const newToken = await refreshToken(token.refreshToken)
+      session.accessToken = token.accessToken;
+      session.refreshToken = token.refreshToken;
+
+      return session;
+    },
+  }
 })
 
 

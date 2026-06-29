@@ -1,11 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import { MOCK_ACCOUNTS } from "@/constants/auth";
-import { FcGoogle } from "react-icons/fc";
 import { Link } from "@/i18n/navigation";
 import { FcLeft } from "react-icons/fc";
-import { BsFacebook } from "react-icons/bs";
 
 import {
   Alert,
@@ -18,7 +15,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/shared/components/ui/form";
 import { Input } from "@/shared/components/ui/input";
@@ -29,6 +25,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { LoginRequest } from "@/types/interfaces/auth";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import useLogin from "../hooks/use-login";
 import AuthCard from "./auth-card";
 
@@ -44,6 +41,8 @@ export function OTPForm({ handleSignInOTP }: TOTPForm) {
   const router = useRouter();
 
   const { login, isPending, error } = useLogin();
+
+  const { update } = useSession();
 
   const loginSchema = useMemo(
     () =>
@@ -73,6 +72,8 @@ export function OTPForm({ handleSignInOTP }: TOTPForm) {
     if (!!res.success) {
 
       router.push("/")
+      router.refresh();
+      await update();
 
     } else {
 
@@ -116,14 +117,14 @@ export function OTPForm({ handleSignInOTP }: TOTPForm) {
 
             <FormField
               control={form.control}
-              name="usernameOrEmail"
+              name="password"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
                     <Input
-                      placeholder={t("phoneNumberPlaceholder")}
+                      // placeholder={t("phoneNumberPlaceholder")}
                       autoFocus
-                      type="tel"
+                      type="string"
                       {...field}
                     />
                   </FormControl>

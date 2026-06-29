@@ -11,18 +11,14 @@ export const generateMetadata = createPageMetadata({
 });
 
 export default function LoginPage() {
-  
+
   const handleSignInGoogle = async () => {
     "use server"
-    await signIn("google", {
+   await signIn("google", {
       redirectTo: "/",
     })
   }
 
-  const hanldeSignOut = async () => {
-    "use server"
-    await signOut();
-  }
   const handleSignInFacebook = async () => {
     "use server"
     await signIn("facebook", {
@@ -33,14 +29,6 @@ export default function LoginPage() {
   return (
     <>
       <LoginForm handleSignInGoogle={handleSignInGoogle} handleSignInFacebook={handleSignInFacebook} />;
-      <Button
-        type="button"
-
-        variant={"outline"}
-        onClick={hanldeSignOut}
-      >
-        đăng xuất
-      </Button>
 
     </>
 

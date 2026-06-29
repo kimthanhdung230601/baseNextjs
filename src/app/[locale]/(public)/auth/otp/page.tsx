@@ -20,7 +20,6 @@ const handleSignInOTP = async (values: LoginRequest) => {
       ...values,
       redirect: false,
     });
-
     return {
       success: true,
     };

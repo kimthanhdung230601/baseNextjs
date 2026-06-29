@@ -3,8 +3,8 @@
 import { useMemo } from "react";
 import { MOCK_ACCOUNTS } from "@/constants/auth";
 import { FcGoogle } from "react-icons/fc";
-import { AuthCard } from "@/features/auth/components/auth-card";
-import { useLogin } from "@/features/auth/hooks/use-login";
+import AuthCard from "@/features/auth/components/auth-card";
+// import { useLogin } from "@/features/auth/hooks/use-login";
 import { Link } from "@/i18n/navigation";
 
 import { AiFillGoogleCircle } from "react-icons/ai";
@@ -33,6 +33,7 @@ import { z } from "zod";
 
 import { useRouter } from "next/navigation";
 import { signIn } from "@/auth";
+import useLogin from "../hooks/use-login";
 // import { signIn } from "@/auth";
 type LoginFormProps = {
   handleSignInGoogle: () => void;

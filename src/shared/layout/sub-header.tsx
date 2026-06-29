@@ -15,18 +15,32 @@ import {
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils/index";
 
-interface SubHeaderProps {
+import { useSession } from "next-auth/react";
+
+interface ISubHeaderProps {
+
   segment?: Segment;
 }
 
-export default function SubHeader({ segment }: SubHeaderProps) {
+export function SubHeader({ segment }: ISubHeaderProps) {
+
+
+  // xử lý handle redirect ở đây 
+  // path private  + nếu login thành công mà có quyền -> children
+  //                 login thành công : ko có quyền -> not authen 
+  // path public : not required -> chilldren
+
   const t = useTranslations("subHeader");
   const pathname = usePathname();
+  const { data: session } = useSession();
+  // console.log("data", session);
+
   const activeSegment =
     segment ??
     (pathname.includes(configs.BUSINESS_PATH_SEGMENT)
       ? Segment.BUSINESS
       : Segment.PERSONAL);
+      
   const navigation =
     activeSegment === Segment.BUSINESS
       ? BUSINESS_NAVIGATION
@@ -114,7 +128,7 @@ function SubHeaderItem({ item, label }: SubHeaderItemProps) {
                             className={cn(
                               "text-sm text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200",
                               pathname === subItem.href &&
-                                "font-medium text-green-700 dark:text-green-400"
+                              "font-medium text-green-700 dark:text-green-400"
                             )}
                           >
                             {t(subItem.label)}
@@ -159,7 +173,7 @@ function SubHeaderItem({ item, label }: SubHeaderItemProps) {
                   className={cn(
                     "block cursor-pointer rounded-sm px-2 py-1.5 text-sm",
                     pathname === item.href &&
-                      "bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400"
+                    "bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400"
                   )}
                 >
                   {label}
@@ -177,7 +191,7 @@ function SubHeaderItem({ item, label }: SubHeaderItemProps) {
                     className={cn(
                       "block rounded-sm px-2 py-1.5 text-sm text-zinc-700 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200",
                       pathname === child.href &&
-                        "bg-green-50 font-medium text-green-700 dark:bg-green-950 dark:text-green-400"
+                      "bg-green-50 font-medium text-green-700 dark:bg-green-950 dark:text-green-400"
                     )}
                   >
                     {t(child.key)}
@@ -202,7 +216,7 @@ function SubHeaderItem({ item, label }: SubHeaderItemProps) {
       className={cn(
         "rounded-md px-3 py-2 text-sm font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800",
         pathname === item.href &&
-          "bg-green-50 font-medium text-green-700 dark:bg-green-950 dark:text-green-400"
+        "bg-green-50 font-medium text-green-700 dark:bg-green-950 dark:text-green-400"
       )}
     >
       {label}

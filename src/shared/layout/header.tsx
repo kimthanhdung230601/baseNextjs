@@ -2,16 +2,19 @@
 
 import { useTranslations } from "next-intl";
 
-import configs from "@/constants/config";
 import { Link } from "@/i18n/navigation";
 import LanguageSwitcher from "@/shared/layout/language-switcher";
 import SegmentSwitcher from "@/shared/layout/segment-switcher";
 import { Button } from "@/shared/components/ui/button";
-
-import ThemeToggle from "../components/theme-toggle";
+import configs from "@/constants/config";
+import { signOut, useSession } from "next-auth/react";
+import { DropdownUserInfor } from "../components/client/UI/dropdownUserInfor";
 
 export default function Header() {
   const t = useTranslations("common");
+  const { data: session } = useSession();
+
+  const handleSignOut = () => { signOut({ redirectTo: "/" }) }
 
   return (
     <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
@@ -25,18 +28,30 @@ export default function Header() {
 
         <div className="flex items-center gap-1 sm:gap-2">
           <SegmentSwitcher />
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/auth/login">{t("login")}</Link>
-          </Button>
-          <Button
-            size="sm"
-            className="bg-green-600 text-white hover:bg-green-700"
-            asChild
-          >
-            <Link href="/auth/register">{t("register")}</Link>
-          </Button>
-          <LanguageSwitcher />
-          <ThemeToggle />
+          {!!session?.user ? (
+            <>
+              <LanguageSwitcher />
+              <DropdownUserInfor handleSignOut={handleSignOut} />
+            </>
+
+          ) : (
+
+            <>
+              <Button variant="ghost" size="sm" asChild>
+                <Link href="/auth/login">{t("login")}</Link>
+              </Button>
+              <Button
+                size="sm"
+                className="bg-green-600 text-white hover:bg-green-700"
+                asChild
+              >
+                <Link href="/auth/register">{t("register")}</Link>
+              </Button>
+              <LanguageSwitcher />
+            </>
+          )
+          }
+
         </div>
       </div>
     </header>
