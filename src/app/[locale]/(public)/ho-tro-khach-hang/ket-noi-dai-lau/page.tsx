@@ -1,10 +1,11 @@
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import { ROUTES } from "@/constants/route";
 import type { PageProps } from "@/types/interfaces/common";
 import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createSegmentMetadata(
   "longTermConnection",
-  "/ho-tro-khach-hang/ket-noi-dai-lau"
+  ROUTES.PERSONAL.CUSTOMER_SUPPORT.LONG_TERM_CONNECTION
 );
 
 export default function LongTermConnectionPage({ params }: PageProps) {

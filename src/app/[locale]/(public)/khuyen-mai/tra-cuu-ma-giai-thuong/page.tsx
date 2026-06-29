@@ -1,10 +1,11 @@
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import { ROUTES } from "@/constants/route";
 import type { PageProps } from "@/types/interfaces/common";
 import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createSegmentMetadata(
   "searchPrize",
-  "/khuyen-mai/tra-cuu-ma-giai-thuong"
+  ROUTES.PERSONAL.PROMOTIONS.SEARCH_PRIZE
 );
 
 export default function SearchPrizePage({ params }: PageProps) {

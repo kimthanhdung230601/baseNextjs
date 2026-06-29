@@ -1,3 +1,5 @@
+import SegmentPage from "@/shared/layout/segment-page";
+import { SiteShell } from "@/shared/layout/site-shell";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getLocale,
@@ -7,13 +9,11 @@ import {
 } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { SiteShell } from "@/shared/layout/site-shell";
-import SegmentPage from "@/shared/layout/segment-page";
 
 export async function generateMetadata() {
   const locale = await getLocale();
   setRequestLocale(locale);
-  const t = await getTranslations("pages.telecommunications");
+  const t = await getTranslations("pages.home");
 
   return buildPageMetadata({
     locale,
@@ -24,6 +24,8 @@ export async function generateMetadata() {
 }
 
 export default async function RootPage() {
+  const locale = await getLocale();
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (

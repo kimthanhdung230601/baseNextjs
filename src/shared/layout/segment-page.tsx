@@ -13,16 +13,16 @@ interface SegmentPageProps {
 
 export default async function SegmentPage({
   params,
-  translationKey = "telecommunications",
+  translationKey = "home",
   breadcrumbSegments,
   children,
 }: SegmentPageProps) {
-  const t = await getTranslations(`pages.${translationKey}`);
-
   if (params) {
     const { locale } = await params;
     setRequestLocale(locale);
   }
+
+  const t = await getTranslations(`pages.${translationKey}`);
 
   return (
     <PageContent

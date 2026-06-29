@@ -2,9 +2,10 @@ import { createPageMetadata } from "@/lib/seo/create-page-metadata";
 import { LoginForm } from "@/features/auth/components/login-form";
 import { Button } from "@/shared/components/ui/button";
 import { signIn, signOut } from "@/auth";
+import { ROUTES } from "@/constants/route";
 
 export const generateMetadata = createPageMetadata({
-  path: "/auth/login",
+  path: ROUTES.AUTH.LOGIN,
   namespace: "auth.login",
   noIndex: true,
 });

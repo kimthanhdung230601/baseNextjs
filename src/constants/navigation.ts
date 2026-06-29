@@ -1,6 +1,7 @@
 import { Segment } from "@/types/enums/segment";
 import type { NavigationConfig } from "@/types/interfaces/navigation";
-import configs from "./config";
+
+import { ROUTES } from "./route";
 
 export const BUSINESS_NAVIGATION: NavigationConfig = {
   segment: Segment.BUSINESS,
@@ -8,17 +9,17 @@ export const BUSINESS_NAVIGATION: NavigationConfig = {
     {
       key: "telecommunications",
       label: "telecommunications",
-      href: `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`,
+      href: ROUTES.BUSINESS.TELECOMMUNICATIONS,
     },
     {
       key: "informationTechnology",
       label: "informationTechnology",
-      href: `/${configs.BUSINESS_PATH_SEGMENT}/cong-nghe-thong-tin`,
+      href: ROUTES.BUSINESS.INFORMATION_TECHNOLOGY,
     },
     {
       key: "transmissionBroadband",
       label: "transmissionBroadband",
-      href: `/${configs.BUSINESS_PATH_SEGMENT}/truyen-dan-bang-thong`,
+      href: ROUTES.BUSINESS.TRANSMISSION_BROADBAND,
     },
   ],
 };
@@ -32,32 +33,32 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
         {
           key: "subscriberTypes",
           label: "subscriberTypes",
-          href: "/dich-vu-di-dong/loai-thue-bao",
+          href: ROUTES.PERSONAL.MOBILE_SERVICES.SUBSCRIBER_TYPES,
         },
         {
           key: "packages",
           label: "packages",
-          href: "/dich-vu-di-dong/goi-cuoc",
+          href: ROUTES.PERSONAL.MOBILE_SERVICES.PACKAGES,
         },
         {
           key: "services",
           label: "services",
-          href: "/dich-vu-di-dong/dich-vu",
+          href: ROUTES.PERSONAL.MOBILE_SERVICES.SERVICES,
         },
         {
           key: "registerNetwork",
           label: "registerNetwork",
-          href: "/dich-vu-di-dong/dang-ky-hoa-mang",
+          href: ROUTES.PERSONAL.MOBILE_SERVICES.REGISTER_NETWORK,
         },
         {
           key: "internationalServices",
           label: "internationalServices",
-          href: "/dich-vu-di-dong/dich-vu-quoc-te",
+          href: ROUTES.PERSONAL.MOBILE_SERVICES.INTERNATIONAL_SERVICES,
         },
         {
           key: "eSim",
           label: "eSim",
-          href: "/dich-vu-di-dong/eSim",
+          href: ROUTES.PERSONAL.MOBILE_SERVICES.ESIM,
         },
       ],
     },
@@ -67,27 +68,27 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
         {
           key: "longTermConnection",
           label: "longTermConnection",
-          href: "/ho-tro-khach-hang/ket-noi-dai-lau",
+          href: ROUTES.PERSONAL.CUSTOMER_SUPPORT.LONG_TERM_CONNECTION,
         },
         {
           key: "faq",
           label: "faq",
-          href: "/ho-tro-khach-hang/cau-hoi-thuong-gap",
+          href: ROUTES.PERSONAL.CUSTOMER_SUPPORT.FAQ,
         },
         {
           key: "searchStore",
           label: "searchStore",
-          href: "/ho-tro-khach-hang/tim-kiem-cua-hang",
+          href: ROUTES.PERSONAL.CUSTOMER_SUPPORT.SEARCH_STORE,
         },
         {
           key: "numberPortability",
           label: "numberPortability",
-          href: "/ho-tro-khach-hang/chuyen-mang-giu-so",
+          href: ROUTES.PERSONAL.CUSTOMER_SUPPORT.NUMBER_PORTABILITY,
         },
         {
           key: "sendFeedback",
           label: "sendFeedback",
-          href: "/ho-tro-khach-hang/gui-phan-anh",
+          href: ROUTES.PERSONAL.CUSTOMER_SUPPORT.SEND_FEEDBACK,
         },
       ],
     },
@@ -97,17 +98,17 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
         {
           key: "promotionNews",
           label: "promotionNews",
-          href: "/khuyen-mai/tin-khuyen-mai",
+          href: ROUTES.PERSONAL.PROMOTIONS.PROMOTION_NEWS,
         },
         {
           key: "prizeInformation",
           label: "prizeInformation",
-          href: "/khuyen-mai/thong-tin-trung-thuong",
+          href: ROUTES.PERSONAL.PROMOTIONS.PRIZE_INFORMATION,
         },
         {
           key: "searchPrize",
           label: "searchPrize",
-          href: "/khuyen-mai/tra-cuu-ma-giai-thuong",
+          href: ROUTES.PERSONAL.PROMOTIONS.SEARCH_PRIZE,
         },
       ],
     },
@@ -122,27 +123,32 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
             {
               key: "accountInfo",
               label: "accountInfo",
-              href: "/my-mobifone/tai-khoan/thong-tin-tai-khoan",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .ACCOUNT_INFO,
             },
             {
               key: "accountDetails",
               label: "accountDetails",
-              href: "/my-mobifone/tai-khoan/thong-tin-ca-nhan",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .ACCOUNT_DETAILS,
             },
             {
               key: "registerInfo",
               label: "registerInfo",
-              href: "/my-mobifone/tai-khoan/dang-ky-thong-tin",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .REGISTER_INFO,
             },
             {
               key: "mypointUsage",
               label: "mypointUsage",
-              href: "/my-mobifone/tai-khoan/lich-su-mypoint",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .MYPOINT_USAGE,
             },
             {
               key: "fwaManagement",
               label: "fwaManagement",
-              href: "/my-mobifone/tai-khoan/quan-ly-thiet-bi-fwa",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.ACCOUNT_INFORMATION
+                .FWA_MANAGEMENT,
             },
           ],
         },
@@ -153,32 +159,32 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
             {
               key: "topup",
               label: "topup",
-              href: "/my-mobifone/tien-ich/nap-tien",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BENEFITS.TOPUP,
             },
             {
               key: "bankTransfer",
               label: "bankTransfer",
-              href: "/my-mobifone/tien-ich/thanh-toan-ngan-hang",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BENEFITS.BANK_TRANSFER,
             },
             {
               key: "autopay",
               label: "autopay",
-              href: "/my-mobifone/tien-ich/autopay",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BENEFITS.AUTOPAY,
             },
             {
               key: "mobifoneOnline",
               label: "mobifoneOnline",
-              href: "/my-mobifone/tien-ich/mobifone-online",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BENEFITS.MOBIFONE_ONLINE,
             },
             {
               key: "mypointBenefit",
               label: "mypointBenefit",
-              href: "/my-mobifone/tien-ich/uu-dai-mypoint",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BENEFITS.MYPOINT_BENEFIT,
             },
             {
               key: "mobifiber",
               label: "mobifiber",
-              href: "/my-mobifone/tien-ich/mobifiber",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BENEFITS.MOBIFIBER,
             },
           ],
         },
@@ -189,22 +195,22 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
             {
               key: "billInquiry",
               label: "billInquiry",
-              href: "/my-mobifone/cuoc/tra-cuoc",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BILLS.BILL_INQUIRY,
             },
             {
               key: "billHistory",
               label: "billHistory",
-              href: "/my-mobifone/cuoc/lich-su-nap-tien",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BILLS.BILL_HISTORY,
             },
             {
               key: "billWebApp",
               label: "billWebApp",
-              href: "/my-mobifone/cuoc/lich-su-thanh-toan-app",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BILLS.BILL_WEB_APP,
             },
             {
               key: "billInvoice",
               label: "billInvoice",
-              href: "/my-mobifone/cuoc/hoa-don-ban-hang",
+              href: ROUTES.PERSONAL.MY_MOBIFONE.BILLS.BILL_INVOICE,
             },
           ],
         },
@@ -213,20 +219,20 @@ export const PERSONAL_NAVIGATION: NavigationConfig = {
     {
       key: "recruitment",
       label: "recruitment",
-      href: "/tuyen-dung",
+      href: ROUTES.PERSONAL.RECRUITMENT,
     },
     {
       key: "fiveGMobifone",
       label: "fiveGMobifone",
-      href: "https://5g.mobifone.vn",
+      href: ROUTES.PERSONAL.FIVE_G_MOBIFONE,
       isExternal: true,
     },
   ],
 };
 
 export const SEGMENT_HOME_PATH = {
-  [Segment.PERSONAL]: configs.BASE_PATH,
-  [Segment.BUSINESS]: `/${configs.BUSINESS_PATH_SEGMENT}/vien-thong`,
+  [Segment.PERSONAL]: ROUTES.PERSONAL.MOBILE_SERVICES.ROOT,
+  [Segment.BUSINESS]: ROUTES.BUSINESS.TELECOMMUNICATIONS,
 } as const;
 
-export const FIVE_G_MOBIFONE_PATH = "/personal/5g-mobifone";
+export const FIVE_G_MOBIFONE_PATH = ROUTES.PERSONAL.FIVE_G_MOBIFONE_PAGE;

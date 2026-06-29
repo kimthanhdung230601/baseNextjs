@@ -1,10 +1,11 @@
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
+import { ROUTES } from "@/constants/route";
 import type { PageProps } from "@/types/interfaces/common";
 import SegmentPage from "@/shared/layout/segment-page";
 
 export const generateMetadata = createSegmentMetadata(
   "numberPortability",
-  "/ho-tro-khach-hang/chuyen-mang-giu-so"
+  ROUTES.PERSONAL.CUSTOMER_SUPPORT.NUMBER_PORTABILITY
 );
 
 export default function NumberPortabilityPage({ params }: PageProps) {

@@ -1,8 +1,9 @@
 import { RegisterForm } from "@/features/auth/components/register-form";
+import { ROUTES } from "@/constants/route";
 import { createPageMetadata } from "@/lib/seo/create-page-metadata";
 
 export const generateMetadata = createPageMetadata({
-  path: "/auth/register",
+  path: ROUTES.AUTH.REGISTER,
   namespace: "auth.register",
   noIndex: true,
 });
