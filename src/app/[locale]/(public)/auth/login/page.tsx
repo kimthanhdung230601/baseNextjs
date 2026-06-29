@@ -1,6 +1,6 @@
-import { LoginForm } from "@/features/auth/components/login-form";
 import { ROUTES } from "@/constants/route";
 import { createPageMetadata } from "@/lib/seo/create-page-metadata";
+import LoginForm from "@/features/auth/components/login-form";
 
 export const generateMetadata = createPageMetadata({
   path: ROUTES.AUTH.LOGIN,

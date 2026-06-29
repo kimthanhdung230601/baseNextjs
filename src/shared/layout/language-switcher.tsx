@@ -18,7 +18,7 @@ const LOCALE_LABELS = {
   [Locale.EN]: "English",
 } as const;
 
-export function LanguageSwitcher() {
+export default function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();

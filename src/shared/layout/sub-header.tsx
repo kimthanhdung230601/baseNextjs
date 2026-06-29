@@ -19,7 +19,7 @@ interface SubHeaderProps {
   segment?: Segment;
 }
 
-export function SubHeader({ segment }: SubHeaderProps) {
+export default function SubHeader({ segment }: SubHeaderProps) {
   const t = useTranslations("subHeader");
   const pathname = usePathname();
   const activeSegment =

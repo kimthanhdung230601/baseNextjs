@@ -17,7 +17,7 @@ interface AuthCardProps {
   className?: string;
 }
 
-export function AuthCard({
+export default function AuthCard({
   title,
   description,
   children,

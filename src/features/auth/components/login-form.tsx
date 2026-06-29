@@ -2,8 +2,8 @@
 
 import { useMemo } from "react";
 import { MOCK_ACCOUNTS } from "@/constants/auth";
-import { AuthCard } from "@/features/auth/components/auth-card";
-import { useLogin } from "@/features/auth/hooks/use-login";
+import AuthCard from "@/features/auth/components/auth-card";
+import useLogin from "@/features/auth/hooks/use-login";
 import { Link } from "@/i18n/navigation";
 import {
   Alert,
@@ -26,7 +26,7 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-export function LoginForm() {
+export default function LoginForm() {
   const t = useTranslations("auth.login");
   const tError = useTranslations("auth.error");
   const tValidation = useTranslations("auth.validation");

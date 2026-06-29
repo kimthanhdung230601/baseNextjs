@@ -15,7 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu";
 
-export function SegmentSwitcher() {
+export default function SegmentSwitcher() {
   const t = useTranslations("common");
   const pathname = usePathname();
   const router = useRouter();

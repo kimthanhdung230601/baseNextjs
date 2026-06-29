@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { BreadcrumbSegment } from "@/types/interfaces/navigation";
 
-import { PageContent } from "./page-content";
+import PageContent from "./page-content";
 
 interface SegmentPageProps {
   params?: Promise<{ locale: string }>;

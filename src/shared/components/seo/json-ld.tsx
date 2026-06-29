@@ -5,7 +5,7 @@ interface JsonLdProps {
   description: string;
 }
 
-export function JsonLd({ locale, description }: JsonLdProps) {
+export default function JsonLd({ locale, description }: JsonLdProps) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",

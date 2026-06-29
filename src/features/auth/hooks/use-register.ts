@@ -7,7 +7,7 @@ import { QUERY_KEYS } from "@/constants/common";
 import { registerApi } from "@/services/auth.service";
 import type { RegisterRequest } from "@/types/interfaces/auth";
 
-export function useRegister() {
+export default function useRegister() {
   const router = useRouter();
 
   return useMutation({

@@ -1,9 +1,10 @@
 import { Fragment } from "react";
-import { useTranslations } from "next-intl";
+import configs from "@/constants/config";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 import { BreadcrumbSegment } from "@/types/interfaces/navigation";
-import configs from "@/constants/config";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,11 +12,9 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/shared/components/ui/breadcrumb";
+} from "./related";
 
-function resolveClickableIndex(
-  segments: BreadcrumbSegment[]
-): number | null {
+function resolveClickableIndex(segments: BreadcrumbSegment[]): number | null {
   if (segments.length <= 1) {
     return segments[0]?.href ? 0 : null;
   }
@@ -29,7 +28,11 @@ function resolveClickableIndex(
   return null;
 }
 
-export default function Breadcrumbs({ segments }: { segments: BreadcrumbSegment[] }) {
+export default function MbfBreadcrumbs({
+  segments,
+}: {
+  segments: BreadcrumbSegment[];
+}) {
   const t = useTranslations();
 
   if (!segments?.length) {
@@ -50,7 +53,9 @@ export default function Breadcrumbs({ segments }: { segments: BreadcrumbSegment[
         {segments.map((segment, index) => {
           const isLast = index === segments.length - 1;
           const isClickable = !isLast && clickableIndex === index;
-          const label = segment.dynamicSegment ? segment.labelSource : t(segment.labelSource)
+          const label = segment.dynamicSegment
+            ? segment.labelSource
+            : t(segment.labelSource);
 
           return (
             <Fragment key={`${segment.labelSource}-${index}`}>

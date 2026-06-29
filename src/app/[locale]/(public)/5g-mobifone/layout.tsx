@@ -1,4 +1,4 @@
-import { FiveGShell } from "@/shared/layout/five-g-shell";
+import FiveGShell from "@/shared/layout/five-g-shell";
 
 interface FiveGMobifoneLayoutProps {
   children: React.ReactNode;

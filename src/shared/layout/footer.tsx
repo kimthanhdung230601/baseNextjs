@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Phone } from "lucide-react";
 
-export function Footer() {
+export default function Footer() {
   const t = useTranslations("footer");
 
   return (

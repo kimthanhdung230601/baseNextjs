@@ -6,7 +6,10 @@
     "language": "Language",
     "personal": "Personal",
     "business": "Business",
-    "home": "Home"
+    "home": "Home",
+    "selectValue": "Select value",
+    "selectStatus": "Select status",
+    "selectService": "Select service"
   },
   "auth": {
     "login": {

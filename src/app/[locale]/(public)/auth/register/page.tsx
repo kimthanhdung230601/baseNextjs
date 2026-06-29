@@ -1,4 +1,4 @@
-import { RegisterForm } from "@/features/auth/components/register-form";
+import RegisterForm from "@/features/auth/components/register-form";
 import { ROUTES } from "@/constants/route";
 import { createPageMetadata } from "@/lib/seo/create-page-metadata";
 

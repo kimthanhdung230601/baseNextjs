@@ -1,15 +1,15 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { LanguageSwitcher } from "@/shared/layout/language-switcher";
-import { SegmentSwitcher } from "@/shared/layout/segment-switcher";
+import LanguageSwitcher from "@/shared/layout/language-switcher";
+import SegmentSwitcher from "@/shared/layout/segment-switcher";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/shared/components/ui/button";
 import ThemeToggle from "../components/theme-toggle";
 import configs from "@/constants/config";
 
-export function Header() {
+export default function Header() {
   const t = useTranslations("common");
 
   return (

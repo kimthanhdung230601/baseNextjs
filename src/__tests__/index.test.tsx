@@ -4,7 +4,7 @@
 
 import "@testing-library/jest-dom";
 
-import { PageContent } from "@/shared/layout/page-content";
+import PageContent from "@/shared/layout/page-content";
 import { render, screen } from "@testing-library/react";
 
 describe("Home", () => {

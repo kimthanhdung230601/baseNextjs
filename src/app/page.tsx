@@ -1,5 +1,5 @@
 import SegmentPage from "@/shared/layout/segment-page";
-import { SiteShell } from "@/shared/layout/site-shell";
+import SiteShell from "@/shared/layout/site-shell";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getLocale,

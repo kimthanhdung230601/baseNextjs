@@ -1,8 +1,8 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { LanguageSwitcher } from "@/shared/layout/language-switcher";
-import { SegmentSwitcher } from "@/shared/layout/segment-switcher";
+import LanguageSwitcher from "@/shared/layout/language-switcher";
+import SegmentSwitcher from "@/shared/layout/segment-switcher";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/shared/components/ui/button";
@@ -11,7 +11,7 @@ interface FiveGShellProps {
   children: React.ReactNode;
 }
 
-export function FiveGShell({ children }: FiveGShellProps) {
+export default function FiveGShell({ children }: FiveGShellProps) {
   const t = useTranslations("common");
   const tPage = useTranslations("pages.fiveGMobifone");
 

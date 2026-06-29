@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SITE_NAME, SITE_URL } from "@/constants/seo";
 import { routing } from "@/i18n/routing";
-import { SiteShell } from "@/shared/layout/site-shell";
+import SiteShell from "@/shared/layout/site-shell";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
