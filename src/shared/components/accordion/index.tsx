@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import type {
   AccordionMultipleProps,
   AccordionSingleProps,
@@ -14,8 +15,8 @@ type AccordionType = AccordionSingleProps | AccordionMultipleProps;
 
 interface MbfAccordionItem {
   value: string;
-  trigger?: React.ReactNode;
-  content?: React.ReactNode;
+  trigger?: ReactNode;
+  content?: ReactNode;
   disabled?: boolean;
 }
 

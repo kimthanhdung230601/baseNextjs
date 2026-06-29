@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { BreadcrumbSegment } from "@/types/interfaces/navigation";
@@ -8,7 +9,7 @@ interface SegmentPageProps {
   params?: Promise<{ locale: string }>;
   translationKey?: string;
   breadcrumbSegments?: BreadcrumbSegment[];
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export default async function SegmentPage({

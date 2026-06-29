@@ -1,3 +1,6 @@
+import { ReactNode } from "react";
+
+import { cn } from "@/lib/utils/index";
 import {
   Card,
   CardContent,
@@ -7,13 +10,11 @@ import {
   CardTitle,
 } from "@/shared/components/ui/card";
 
-import { cn } from "@/lib/utils/index";
-
 interface AuthCardProps {
   title: string;
   description?: string;
-  children: React.ReactNode;
-  footer?: React.ReactNode;
+  children: ReactNode;
+  footer?: ReactNode;
   className?: string;
 }
 

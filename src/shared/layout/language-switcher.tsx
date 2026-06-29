@@ -1,5 +1,9 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
+import { useLocale } from "next-intl";
+
+import { Locale } from "@/types/enums/locale";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { Button } from "@/shared/components/ui/button";
 import {
@@ -8,10 +12,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
-import { useLocale } from "next-intl";
-
-import { Locale } from "@/types/enums/locale";
 
 const LOCALE_LABELS = {
   [Locale.VI]: "Tiếng Việt",

@@ -1,4 +1,7 @@
 import { useTranslations } from "next-intl";
+
+import type { DropdownOption } from "@/types/interfaces/common";
+
 import {
   Select,
   SelectContent,
@@ -7,8 +10,6 @@ import {
   SelectValue,
 } from "./related";
 
-import type { DropdownOption } from "@/types/interfaces/common";
-
 interface MbfSelectProps {
   options: DropdownOption[];
   placeholderTranslationKey?: string;
@@ -16,23 +17,22 @@ interface MbfSelectProps {
   onValueChange?: (value: string) => void;
 }
 
-const fallbackPlaceholder = 'common.selectValue';
+const fallbackPlaceholder = "common.selectValue";
 
 export default function MbfSelect({
   options,
   placeholderTranslationKey,
   selectedValue,
-  onValueChange
+  onValueChange,
 }: MbfSelectProps) {
-  const t = useTranslations();
-  const selectedOptionLabel = options.find(opt => opt.value === selectedValue)?.label;
-  const displayValue = t(selectedOptionLabel ?? (placeholderTranslationKey || fallbackPlaceholder));
+  const selectedOptionLabel = options.find(
+    (opt) => opt.value === selectedValue
+  )?.label;
+  const displayValue =
+    selectedOptionLabel ?? (placeholderTranslationKey || fallbackPlaceholder);
 
   return (
-    <Select
-      value={selectedValue}
-      onValueChange={onValueChange}
-    >
+    <Select value={selectedValue} onValueChange={onValueChange}>
       <SelectTrigger>
         <SelectValue>{displayValue}</SelectValue>
       </SelectTrigger>

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import { BreadcrumbSegment } from "@/types/interfaces/navigation";
 
 import MbfBreadcrumbs from "../components/breadcrumbs";
@@ -5,8 +7,8 @@ import MbfBreadcrumbs from "../components/breadcrumbs";
 interface PageContentProps {
   title: string;
   description: string;
-  breadcrumbSegments?: BreadcrumbSegment[]; // nếu page ko có breadcrumbs thì ko truyền prop này
-  children?: React.ReactNode;
+  breadcrumbSegments?: BreadcrumbSegment[]; // náº¿u page ko cÃ³ breadcrumbs thÃ¬ ko truyá»n prop nÃ y
+  children?: ReactNode;
 }
 
 export default function PageContent({
