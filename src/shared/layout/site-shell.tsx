@@ -20,6 +20,7 @@ export default function SiteShell({ children }: SiteShellProps) {
     return <>{children}</>;
   }
 
+  console.log("test rule");
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
