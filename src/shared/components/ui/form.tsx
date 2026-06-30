@@ -11,6 +11,7 @@ import {
 } from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { Slot } from "@radix-ui/react-slot";
+import { useTranslations } from "next-intl";
 import {
   Controller,
   FormProvider,
@@ -153,12 +154,18 @@ const FormDescription = forwardRef<
 });
 FormDescription.displayName = "FormDescription";
 
+type FormMessageProps = HTMLAttributes<HTMLParagraphElement> & {
+  namespace?: string;
+};
+
 const FormMessage = forwardRef<
   HTMLParagraphElement,
-  HTMLAttributes<HTMLParagraphElement>
->(({ className, children, ...props }, ref) => {
+  FormMessageProps
+>(({ className, children, namespace, ...props }, ref) => {
   const { error, formMessageId } = useFormField();
-  const body = error ? String(error?.message ?? "") : children;
+  const t = useTranslations(namespace);
+
+  const body = error ? t(String(error.message)) : children;
 
   if (!body) {
     return null;
