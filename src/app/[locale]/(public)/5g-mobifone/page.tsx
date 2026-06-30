@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+
+import type { PageProps } from "@/types/interfaces/common";
 import { ROUTES } from "@/constants/route";
 import { createSegmentMetadata } from "@/lib/seo/create-page-metadata";
-import type { PageProps } from "@/types/interfaces/common";
 
 export const generateMetadata = createSegmentMetadata(
   "fiveGMobifone",
