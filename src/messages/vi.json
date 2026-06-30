@@ -23,7 +23,24 @@
       "submitting": "Đang đăng nhập...",
       "forgotPassword": "Quên mật khẩu?",
       "noAccount": "Chưa có tài khoản?",
-      "mockHint": "Mock: admin dùng {username} / {password} để vào /admin"
+      "mockHint": "Mock: admin dùng {username} / {password} để vào /admin",
+      "phoneNumber": "Số điện thoại",
+      "phoneNumberPlaceholder": "Nhập số điện thoại"
+    },
+    "otp": {
+     "title": "Đăng nhập",
+      "description": "Đăng nhập để truy cập dịch vụ Mobifone",
+      "usernameOrEmail": "Tên đăng nhập hoặc Email",
+      "usernameOrEmailPlaceholder": "Nhập tên đăng nhập hoặc email",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "Nhập mật khẩu",
+      "submit": "Đăng nhập",
+      "submitting": "Đang đăng nhập...",
+      "forgotPassword": "Quên mật khẩu?",
+      "noAccount": "Chưa có tài khoản?",
+      "mockHint": "Mock: admin dùng {username} / {password} để vào /admin",
+      "phoneNumber": "Số điện thoại",
+      "phoneNumberPlaceholder": "Nhập mã OTP"
     },
     "register": {
       "title": "Đăng ký",

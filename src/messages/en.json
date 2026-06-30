@@ -23,7 +23,24 @@
       "submitting": "Signing in...",
       "forgotPassword": "Forgot password?",
       "noAccount": "Don't have an account?",
-      "mockHint": "Mock: use {username} / {password} for /admin"
+      "mockHint": "Mock: use {username} / {password} for /admin",
+      "phoneNumber": "Phone number",
+      "phoneNumberPlaceholder": "Enter Phone number"
+    },
+    "otp": {
+      "title": "OTP",
+      "description": "Sign in to access Mobifone services",
+      "usernameOrEmail": "Username or Email",
+      "usernameOrEmailPlaceholder": "Enter username or email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter password",
+      "submit": "Login",
+      "submitting": "Signing in...",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "mockHint": "Mock: use {username} / {password} for /admin",
+      "phoneNumber": "Phone number",
+      "phoneNumberPlaceholder": "Enter Phone number"
     },
     "register": {
       "title": "Register",

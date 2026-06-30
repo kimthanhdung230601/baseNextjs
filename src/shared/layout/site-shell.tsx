@@ -6,7 +6,7 @@ import { usePathname } from "@/i18n/navigation";
 import { isAuthPath, isFiveGMobifonePath } from "@/lib/navigation";
 import Footer from "@/shared/layout/footer";
 import Header from "@/shared/layout/header";
-import SubHeader from "@/shared/layout/sub-header";
+import { SubHeader } from "./sub-header";
 
 interface SiteShellProps {
   children: ReactNode;

@@ -6,13 +6,17 @@ import {
   ThemeProvider as NextThemesProvider,
   type ThemeProviderProps,
 } from "next-themes";
+import { SessionProvider } from "next-auth/react";
 
 export default function Provider({ children, ...props }: ThemeProviderProps) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
+
     <QueryClientProvider client={queryClient}>
-      <NextThemesProvider {...props}>{children}</NextThemesProvider>
+      <SessionProvider >
+        <NextThemesProvider {...props}>{children}</NextThemesProvider>
+      </SessionProvider>
     </QueryClientProvider>
   );
 }
