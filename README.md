@@ -21,8 +21,12 @@ Repo này tuân thủ các quy tắc phát triển nghiêm ngặt về code styl
 ## Cài đặt & Khởi động
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+
+cp .env.example .env.local
+fill các giá trị của môi trường 
+
+npm run dev
 ```
 
 Hoặc dùng npm/yarn tương ứng.
@@ -166,3 +170,4 @@ Lưu ý:
 - Đóng góp: Mở PR, tuân thủ quy tắc phát triển.
 
 # baseNextjs
+vào commit ... để lấy 
