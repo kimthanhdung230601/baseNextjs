@@ -1,7 +1,7 @@
 import Credentials from "next-auth/providers/credentials"
 import Facebook from "next-auth/providers/facebook"
 import Google from "next-auth/providers/google"
-import NextAuth, { User } from "next-auth"
+import NextAuth from "next-auth"
 import { loginApi } from "./services/auth.service"
 import { LoginRequest } from "./types/interfaces/auth"
 
